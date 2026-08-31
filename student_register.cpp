@@ -21,7 +21,7 @@ int defaultStudentID();
 void inputStudent(Student &stu);
 void saveStudent(Student s);
 void arraystudentlist();
-void displayStudent();
+void displayStudent(Student s);
 
 void studentRegister()//main function
 {
@@ -32,25 +32,50 @@ void studentRegister()//main function
     saveStudent(s);
     
     arraystudentlist();
-
-    displayStudent();
 }
 
 int defaultStudentID()
-{
+{	
     ifstream file("Student.txt");
 
     string line;
-    int count = 0;
+    int maxID = 0;
 
-    while(getline(file, line))
+    while (getline(file, line))
     {
-        count++;
+        if (line.empty())
+        {
+            continue;
+        }
+
+        stringstream ss(line);
+
+        string studentID;
+
+        // Read the first field before comma
+        getline(ss, studentID, ',');
+
+        // Example: S001
+        // Remove "S"
+        if (studentID.length() > 1)
+        {
+            string numberPart = studentID.substr(1);
+
+            int idNumber = 0;
+
+            stringstream convert(numberPart);
+            convert >> idNumber;
+
+            if (idNumber > maxID)
+            {
+                maxID = idNumber;
+            }
+        }
     }
 
     file.close();
 
-    return count + 1;
+    return maxID + 1;
 }
 
 void inputStudent(Student &stu)
@@ -58,7 +83,7 @@ void inputStudent(Student &stu)
     Student s;//Student
 
     cout << "Name       : ";
-    cin.ignore(); 
+    cin.ignore();
     getline(cin, stu.name);
 
     cout << "Phone      : ";
@@ -78,17 +103,38 @@ void saveStudent(Student s)
     
     int id = defaultStudentID();
 
-    if(file.is_open())
+    if (file.is_open())
     {
-        file << "S" << setw(3) << setfill('0') << id << ","
+        string studentID;
+
+        stringstream ss;
+		ss << id;
+		string number;
+		ss >> number;
+
+		if (id < 10)
+		{
+    		studentID = "S00" + number;
+		}
+		else if (id < 100)
+		{
+    		studentID = "S0" + number;
+		}
+		else
+		{
+    		studentID = "S" + number;
+		}
+
+        file << studentID << ","
              << s.name << ","
              << s.phone << ","
-             << s.email << "@gmail.com" << ","
+             << s.email << ","
              << s.password << endl;
 
         file.close();
-
-        cout << "\nStudent Registered Successfully.\n";
+        
+        s.id = studentID;
+        displayStudent(s);
     }
     else
     {
@@ -127,28 +173,16 @@ void arraystudentlist()
 	file.close();
 }
 
-void displayStudent()
+void displayStudent(Student s)
 {
-	ifstream file("Student.txt");
+    cout << "\n============================================\n";
+    cout << "          REGISTRATION SUCCESSFUL\n";
+    cout << "============================================\n";
 
-    string line;
+    cout << "ID       : " << s.id << endl;
+    cout << "Name     : " << s.name << endl;
+    cout << "Phone    : " << s.phone << endl;
+    cout << "Email    : " << s.email << endl;
 
-    cout << "\n===== Student List =====\n";
-    
-    cout << left
-    	 << setw(8)  << "ID"
-    	 << setw(20) << "Name"
-    	 << setw(15) << "Phone"
-    	 << setw(35) << "Email"
-    	 << endl;
-    	 
-	for(int i = 0; i < studentCount; i++)
-	{
-		cout << left
-			 << setw(8)  << studentList[i].id
-			 << setw(20) << studentList[i].name
-			 << setw(15) << studentList[i].phone
-			 << setw(35) << studentList[i].email
-			 << endl;
-	}
+    cout << "============================================\n";
 }

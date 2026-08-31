@@ -22,7 +22,7 @@ int defaultAgentID();
 void inputAgent(Agent &ag);
 void saveAgent(Agent a);
 void array_agentlist();
-void displayAgent();
+void displayAgent(Agent a);
 
 void agentRegister()//main function
 {
@@ -33,25 +33,50 @@ void agentRegister()//main function
     saveAgent(a);
     
     array_agentlist();
-
-    displayAgent();
 }
 
 int defaultAgentID()
-{
+{	
     ifstream file("Agent.txt");
 
     string line;
-    int count = 0;
+    int maxID = 0;
 
-    while(getline(file, line))
+    while (getline(file, line))
     {
-        count++;
+        if (line.empty())
+        {
+            continue;
+        }
+
+        stringstream ss(line);
+
+        string agentID;
+
+        // Read the first field before comma
+        getline(ss, agentID, ',');
+
+        // Example: S001
+        // Remove "S"
+        if (agentID.length() > 1)
+        {
+            string numberPart = agentID.substr(1);
+
+            int idNumber = 0;
+
+            stringstream convert(numberPart);
+            convert >> idNumber;
+
+            if (idNumber > maxID)
+            {
+                maxID = idNumber;
+            }
+        }
     }
 
     file.close();
 
-    return count + 1;
+    return maxID + 1;
 }
 
 void inputAgent(Agent &ag)
@@ -79,17 +104,38 @@ void saveAgent(Agent a)
     
     int id = defaultAgentID();
 
-    if(file.is_open())
+    if (file.is_open())
     {
-        file << "A" << setw(3) << setfill('0') << id << ","
+        string agentID;
+
+        stringstream ss;
+		ss << id;
+		string number;
+		ss >> number;
+
+		if (id < 10)
+		{
+    		agentID = "A00" + number;
+		}
+		else if (id < 100)
+		{
+    		agentID = "A0" + number;
+		}
+		else
+		{
+    		agentID = "A" + number;
+		}
+
+        file << agentID << ","
              << a.name << ","
              << a.phone << ","
-             << a.email << "@gmail.com" << ","
+             << a.email << ","
              << a.password << endl;
 
         file.close();
-
-        cout << "\nAgent Registered Successfully.\n";
+        
+        a.id = agentID;
+        displayAgent(a);
     }
     else
     {
@@ -128,28 +174,16 @@ void array_agentlist()
 	file.close();
 }
 
-void displayAgent()
+void displayAgent(Agent a)
 {
-	ifstream file("Agent.txt");
+    cout << "\n============================================\n";
+    cout << "          REGISTRATION SUCCESSFUL\n";
+    cout << "============================================\n";
 
-    string line;
+    cout << "ID       : " << a.id << endl;
+    cout << "Name     : " << a.name << endl;
+    cout << "Phone    : " << a.phone << endl;
+    cout << "Email    : " << a.email << endl;
 
-    cout << "\n===== Agent List =====\n";
-    
-    cout << left
-    	 << setw(8)  << "ID"
-    	 << setw(20) << "Name"
-    	 << setw(15) << "Phone"
-    	 << setw(35) << "Email"
-    	 << endl;
-    	 
-	for(int i = 0; i < agentCount; i++)
-	{
-		cout << left
-			 << setw(8)  << agentList[i].id
-			 << setw(20) << agentList[i].name
-			 << setw(15) << agentList[i].phone
-			 << setw(35) << agentList[i].email
-			 << endl;
-	}
+    cout << "============================================\n";
 }

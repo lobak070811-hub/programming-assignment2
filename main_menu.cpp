@@ -33,7 +33,7 @@ void mainMenu()
         switch (choice)
         {
             case 1:
-                loginMenu();
+                //loginMenu();
                 break;
 
             case 2:
@@ -42,7 +42,7 @@ void mainMenu()
 
             case 3:
                 cout << "\nThank you for using the system.\n";
-                return 0;
+                return;
 
             default:
                 cout << "\nInvalid choice.\n";
