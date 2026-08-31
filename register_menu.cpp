@@ -4,27 +4,23 @@
 
 using namespace std;
 
-void mainMenu();
+void studentRegister();
+void ownerRegister();
+void agentRegister();
 
-int main(){
-	
-	mainMenu();
-	
-	return 0;
-}
-
-void mainMenu()
+void registerMenu()
 {
     int choice;
 
     while (true)
     {
         cout << "\n=============================\n";
-        cout << "   Accommodation System\n";
+        cout << "          REGISTER\n";
         cout << "=============================\n";
-        cout << "1. Log in\n";
-        cout << "2. Register\n";
-        cout << "3. Exit\n";
+        cout << "1. Register as Student\n";
+        cout << "2. Register as Owner\n";
+        cout << "3. Register as Agent\n";
+        cout << "4. Back to Main Menu\n";
         cout << "=============================\n";
         cout << "Enter your choice: ";
 
@@ -33,15 +29,18 @@ void mainMenu()
         switch (choice)
         {
             case 1:
-                //loginMenu();
+                studentRegister();
                 break;
 
             case 2:
-                registerMenu();
+                ownerRegister();
                 break;
 
             case 3:
-                cout << "\nThank you for using the system.\n";
+                agentRegister();
+                break;
+
+            case 4:
                 return;
 
             default:
@@ -49,4 +48,3 @@ void mainMenu()
         }
     }
 }
-
