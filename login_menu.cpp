@@ -14,9 +14,44 @@ string currentName;
 string currentPhone;
 string currentRole;
 
+void getUserInfo(string filename, string inputID, string &name, string &phone)
+{
+    ifstream file(filename.c_str());
+
+    if (!file.is_open())
+    {
+        return;
+    }
+
+    string line;
+
+    while (getline(file, line))
+    {
+        stringstream ss(line);
+
+        string id;
+        string email;
+        string password;
+
+        getline(ss, id, ',');
+        getline(ss, name, ',');
+        getline(ss, phone, ',');
+        getline(ss, email, ',');
+        getline(ss, password);
+
+        if (id == inputID)
+        {
+            file.close();
+            return;
+        }
+    }
+
+    file.close();
+}
+
 bool checkLogin(string filename, string inputID, string inputPassword)
 {
-    ifstream file(filename);
+    ifstream file(filename.c_str());
 
     if (!file.is_open())
     {
@@ -55,8 +90,8 @@ bool checkLogin(string filename, string inputID, string inputPassword)
     return false;
 }
 
-void login(){//main function 
-
+void loginMenu()//main function
+{ 
     string inputID;
     string inputPassword;
 
@@ -72,15 +107,25 @@ void login(){//main function
 
     // Check Student
     if (checkLogin("Student.txt", inputID, inputPassword))
-    {
-        cout << "\nLogin Successful!\n";
-        cout << "Welcome, Student " << inputID << "!\n";
+	{
+    	currentID = inputID;
 
-        // Later:
-        // studentMenu();
+    	getUserInfo(
+        	"Student.txt",
+        	inputID,
+        	currentName,
+        	currentPhone
+    	);
 
-        return;
-    }
+    	currentRole = "Student";
+
+    	cout << "\nLogin Successful!\n";
+    	cout << "Welcome, " << currentName << "!\n";
+	
+    	// studentMenu();
+		
+    	return;
+	}
 
     // Check Owner
 	if (checkLogin("Owner.txt", inputID, inputPassword))

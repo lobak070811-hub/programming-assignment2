@@ -22,6 +22,6 @@ void loginMenu();
 void ownerPropertyMenu();
 void agentPropertyMenu();
 void addProperty();
-void editProperty();
+void renewProperty();
 
 #endif //end code

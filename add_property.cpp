@@ -94,8 +94,8 @@ string defaultPropertyID(){
     return newID;
 }
 
-void inputProperty(){
-	
+void inputProperty()
+{	
 	Property p;
  
 	p.propertyID = defaultPropertyID();
@@ -180,8 +180,8 @@ void inputProperty(){
     displayCurrentInputProperty(p);
 }
 
-void displayCurrentInputProperty(const Property &p){
-	
+void displayCurrentInputProperty(const Property &p)
+{
 	//show added property
     cout << "\n====================================\n";
     cout << "       PROPERTY ADDED SUCCESSFULLY\n";
@@ -199,5 +199,4 @@ void displayCurrentInputProperty(const Property &p){
     cout << "Phone           : " << p.publisherPhone << endl;
 
     cout << "====================================\n";
-    
 }

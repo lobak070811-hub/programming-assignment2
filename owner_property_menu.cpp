@@ -36,15 +36,15 @@ void ownerPropertyMenu()
                 break;
 
             case 2:
-                editProperty();
+                renewProperty();
                 break;
 
             case 3:
-                deleteProperty();
+                //deleteProperty();
                 break;
 
             case 4:
-                viewMyProperty();
+                //viewMyProperty();
                 break;
 
             case 5:

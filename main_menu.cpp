@@ -37,12 +37,12 @@ void mainMenu()
                 break;
 
             case 2:
-                registerMenu();
+                //registerMenu();
                 break;
 
             case 3:
                 cout << "\nThank you for using the system.\n";
-                return 0;
+                return;
 
             default:
                 cout << "\nInvalid choice.\n";
