@@ -1,0 +1,4 @@
+S001,ary Wong,0123456789,wonggary@gmail.com,handsomegary
+S002,hoo Yang,0112223334,yangchoo@gmail.com,yewyuisgay
+S003,Lim Yu Fong,0123334445,yufonglim@gmail.com,gugugagarich
+S004,Beckham Lim,0123456677,beckham@gmail.com,backhamburger
