@@ -37,7 +37,7 @@ void mainMenu()
                 break;
 
             case 2:
-                registerMenu();
+                //registerMenu();
                 break;
 
             case 3:
