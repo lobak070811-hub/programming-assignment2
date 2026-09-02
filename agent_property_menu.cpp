@@ -44,7 +44,7 @@ void agentPropertyMenu()
                 break;
 
             case 4:
-                //viewMyProperty();
+                viewProperty();
                 break;
 
             case 5:

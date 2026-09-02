@@ -23,8 +23,8 @@ struct Property
     string publisherRole;
 };
 
-void displayProperty(const Property &p);
-bool readProperty(string line, Property &p);
+void displayProperty_delete(const Property &p);
+bool readProperty_delete(string line, Property &p);
 
 void deleteProperty()//main function 
 {
@@ -57,7 +57,7 @@ void deleteProperty()//main function
 
         Property p;
 
-        if (readProperty(line, p))
+        if (readProperty_delete(line, p))
         {
             if (p.propertyID == inputID)
             {
@@ -74,7 +74,7 @@ void deleteProperty()//main function
 
                 cout << "\nProperty Found!\n";
 
-                displayProperty(p);
+                displayProperty_delete(p);
 
                 break;
             }
@@ -121,7 +121,7 @@ void deleteProperty()//main function
 
         Property p;
 
-        if (readProperty(line, p))
+        if (readProperty_delete(line, p))
         {
             if (p.propertyID != inputID)
             {
@@ -141,7 +141,7 @@ void deleteProperty()//main function
 }
 
 // Read property information from one line
-bool readProperty(string line, Property &p)
+bool readProperty_delete(string line, Property &p)
 {
     stringstream ss(line);
 
@@ -174,7 +174,7 @@ bool readProperty(string line, Property &p)
     return true;
 }
 
-void displayProperty(const Property &p)
+void displayProperty_delete(const Property &p)
 {
     cout << "\n====================================\n";
     cout << "          PROPERTY DETAILS\n";

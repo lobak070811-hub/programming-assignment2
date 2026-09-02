@@ -24,5 +24,6 @@ void agentPropertyMenu();
 void addProperty();
 void renewProperty();
 void deleteProperty();
+void viewProperty();
 
 #endif //end code
