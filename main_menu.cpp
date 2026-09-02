@@ -33,11 +33,11 @@ void mainMenu()
         switch (choice)
         {
             case 1:
-                //loginMenu();
+                loginMenu();
                 break;
 
             case 2:
-                //registerMenu();
+                registerMenu();
                 break;
 
             case 3:
