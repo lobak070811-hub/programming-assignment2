@@ -1,0 +1,2 @@
+P001,Master,Scotpine Condo,Sungai Long,650,75,5,A001,Kelwin Tan,0112223334,Agent
+P002,Middle,Forest Green,Sungai Long,500,50,10,O001,OwnerA,0199987776,Owner
