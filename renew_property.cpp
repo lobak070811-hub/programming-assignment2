@@ -196,16 +196,16 @@ void displayUpdatedProperty()
 	cout << " PROPERTY UPDATE SUCCESSFULLY\n"; 
 	cout << "=====================================\n";
 	
-	cout << "Property ID : " << updatedProperty.propertyID << endl; 
-	cout << "Room Type : " << updatedProperty.roomType << endl; 
-	cout << "Property Name : " << updatedProperty.propertyName << endl; 
-	cout << "Location : " << updatedProperty.location << endl; 
-	cout << "Price : RM" << updatedProperty.price << endl; 
-	cout << "Area : " << updatedProperty.area << " sqft" << endl; 
-	cout << "Distance : " << updatedProperty.distance << " km" << endl; 
-	cout << "Published By : " << updatedProperty.publisherName << endl; 
-	cout << "Role : " << updatedProperty.publisherRole << endl; 
-	cout << "Phone : " << updatedProperty.publisherPhone << endl;
+	cout << "Property ID    : " << updatedProperty.propertyID << endl; 
+	cout << "Room Type      : " << updatedProperty.roomType << endl; 
+	cout << "Property Name  : " << updatedProperty.propertyName << endl; 
+	cout << "Location       : " << updatedProperty.location << endl; 
+	cout << "Price          : RM" << updatedProperty.price << endl; 
+	cout << "Area           : " << updatedProperty.area << " sqft" << endl; 
+	cout << "Distance       : " << updatedProperty.distance << " km" << endl; 
+	cout << "Published By   : " << updatedProperty.publisherName << endl; 
+	cout << "Role           : " << updatedProperty.publisherRole << endl; 
+	cout << "Phone          : " << updatedProperty.publisherPhone << endl;
 	
 	cout << "====================================\n"; 
 }

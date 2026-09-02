@@ -40,7 +40,7 @@ void ownerPropertyMenu()
                 break;
 
             case 3:
-                //deleteProperty();
+                deleteProperty();
                 break;
 
             case 4:

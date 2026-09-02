@@ -23,5 +23,6 @@ void ownerPropertyMenu();
 void agentPropertyMenu();
 void addProperty();
 void renewProperty();
+void deleteProperty();
 
 #endif //end code
