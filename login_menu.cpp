@@ -122,7 +122,7 @@ void loginMenu()//main function
     	cout << "\nLogin Successful!\n";
     	cout << "Welcome, " << currentName << "!\n";
 	
-    	// studentMenu();
+    	studentMenu();
 		
     	return;
 	}

@@ -4,12 +4,30 @@
 #include <iostream>
 #include <string>
 
-//declare global variable
-extern std::string currentID;
-extern std::string currentName;
-extern std::string currentPhone;
-extern std::string currentRole;
+using namespace std;
 
+//declare global variable
+struct Property
+{
+    string propertyID;
+    string roomType;
+    string propertyName;
+    string location;
+    double price;
+    double area;
+    double distance;
+    string publisherID;
+    string publisherName;
+    string publisherPhone;
+    string publisherRole;
+};
+
+extern string currentID;
+extern string currentName;
+extern string currentPhone;
+extern string currentRole;
+
+//declare function
 void mainMenu();
 
 void registerMenu();
@@ -24,6 +42,10 @@ void agentPropertyMenu();
 void addProperty();
 void renewProperty();
 void deleteProperty();
-void viewProperty();
+void viewPropertyPublisher();
+
+void studentMenu();
+void viewPropertyStudent();
+void addShortlist();
 
 #endif //end code

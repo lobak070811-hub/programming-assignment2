@@ -8,21 +8,6 @@
 
 using namespace std;
 
-struct Property
-{
-    string propertyID;
-    string roomType;
-    string propertyName;
-    string location;
-    double price;
-    double area;
-    double distance;
-    string publisherID;
-    string publisherName;
-    string publisherPhone;
-    string publisherRole;
-};
-
 void displayProperty_delete(const Property &p);
 bool readProperty_delete(string line, Property &p);
 

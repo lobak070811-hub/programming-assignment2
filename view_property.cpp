@@ -8,25 +8,10 @@
 
 using namespace std;
 
-struct Property
-{
-    string propertyID;
-    string roomType;
-    string propertyName;
-    string location;
-    double price;
-    double area;
-    double distance;
-    string publisherID;
-    string publisherName;
-    string publisherPhone;
-    string publisherRole;
-};
-
 bool readProperty_view(string line, Property &p);
 void displayProperty_view(const Property &p);
 
-void viewProperty()//main function
+void viewPropertyPublisher()//main function
 {
     ifstream file("Property.txt");
 
@@ -59,6 +44,7 @@ void viewProperty()//main function
                 found = true;
 
                 displayProperty_view(p);
+                system("pause");
             }
         }
     }

@@ -8,22 +8,6 @@
 
 using namespace std;
 
-struct Property{
-	
-	string propertyID;
-	string roomType;
-	string propertyName;
-	string location;
-	double price;
-	double area;
-	double distance;
-	string publisherID;
-	string publisherName;
-	string publisherPhone;
-	string publisherRole;
-	
-};
-
 string searchPropertyID;
 bool propertyFound = false;
 Property updatedProperty;

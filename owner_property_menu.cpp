@@ -44,7 +44,7 @@ void ownerPropertyMenu()
                 break;
 
             case 4:
-                viewProperty();
+                viewPropertyPublisher();
                 break;
 
             case 5:

@@ -44,7 +44,7 @@ void agentPropertyMenu()
                 break;
 
             case 4:
-                viewProperty();
+                viewPropertyPublisher();
                 break;
 
             case 5:
