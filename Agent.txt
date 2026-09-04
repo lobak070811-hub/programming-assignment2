@@ -1,1 +1,15 @@
 A001,Kelwin Tan,0112223334,tankelwin@gmail.com,seeyounextsem
+A002,Jason Lee,0123456789,jasonlee@gmail.com,adminpass123
+A003,Marcus Wong Teck,0139876543,marcuswong@gmail.com,masterkey888
+A004,David Chen,0171122334,davidchen@gmail.com,dchenpass99
+A005,Kevin Ang Kah Seng,0165544332,kevinang@gmail.com,superagent7
+A006,Alvin Tay,0198877665,alvintay@gmail.com,alvinadmin1
+A007,Lucas Goh Peng,01133445566,lucasgoh@gmail.com,lucas2024pass
+A008,Ryan Teoh,0142233445,ryanteoh@gmail.com,ryanagent88
+A009,Justin Low Kian,0189988776,justinlow@gmail.com,justinpass77
+A010,Bryan Sim Boon Liang,0126677889,bryansim@gmail.com,bryan666888
+A011,Alex Ho,0154455667,alexho@gmail.com,alexpass1234
+A012,Kenneth Lau Chee,0137788990,kennethlau@gmail.com,kenadmin999
+A013,Ivan Ng,0162233441,ivanng@gmail.com,ivanagent888
+A014,Aaron Chong Wei,01199887766,aaronchong@gmail.com,aaronpass2024
+A015,Nicholas Lim Chun,0176655443,nicholaslim@gmail.com,nicksecret1

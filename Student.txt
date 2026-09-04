@@ -3,3 +3,48 @@ S002,Choo Yang,0112223334,yangchoo@gmail.com,yewyuisgay
 S003,Lim Yu Fong,0123334445,yufonglim@gmail.com,gugugagarich
 S004,Beckham Lim,0123456677,beckham@gmail.com,backhamburger
 S005,Ling Yew Yu,01234567899,yewyu@gmail.com,888888
+S006,Tan Ming Kang,0123456780,jasontan@gmail.com,jason1234
+S007,Kevin Chen So Hai,0139876543,kevinchen@gmail.com,kevinc999
+S008,Lee Kong Chian,0171122334,alvinlee@gmail.com,alvinpass88
+S009,Wong Hao Yi,0165544332,marcusw@gmail.com,marcus2024
+S010,Daniel Tay Jun Hao,0198877665,danieltay@gmail.com,dtay12345
+S011,Loh Yu Jie,01133445566,yujieloh@gmail.com,ericpass666
+S012,Lucas Yap Si Chern,0142233445,lucasyap@gmail.com,lucas8888
+S013,Teoh Rei Wen,0189988776,rwenteoh@gmail.com,ryan99pass
+S014,Justin Han Jun Jie,0126677889,justinhan@gmail.com,justin777
+S015,Sim Yen Yee,0154455667,bryansim@gmail.com,bryanpass0
+S016,Alex Tay Chung Wei,0137788990,alextay@gmail.com,alexho123
+S017,David Loh Man,0162233441,davidloh@gmail.com,davidpass9
+S018,Kenneth Lim,01199887766,kennethlim@gmail.com,ken123456
+S019,Ivan,0176655443,ivan@gmail.com,ivanpass888
+S020,Aaron Chong Kai Ming,0182233445,aaronchong@gmail.com,aaron2024
+S021,Darren Lim Kang Chun,0129988771,darrenlim@gmail.com,darren999
+S022,Nicholas Lim Hao Yu,0145566778,nicholaslim@gmail.com,nickpass123
+S023,Brandon Lee,0193344556,brandonlee@gmail.com,brandon88
+S024,Chris Wong Wei,01155667788,chriswong@gmail.com,chrispass7
+S025,Ethan Chew Hong En,0178899001,ethanchew@gmail.com,ethan1234
+S026,Ong Gau,0184455667,gauong@gmail.com,felixpass66
+S027,Yeoh Xi,0132233445,yeohxi@gmail.com,gavin888
+S028,Koh Rui Kang,0169988776,henrykoh@gmail.com,henry12345
+S029,Chia Li An,0124455667,lianchia@gmail.com,ianpass99
+S030,Soh Ma Kai,0157788990,juliansoh@gmail.com,julian2024
+S031,Tan Kang Chao,01122334455,kctan@gmail.com,leopass888
+S032,Matthew Foo,0148899001,matthewfoo@gmail.com,matthew123
+S033,Nathan,0196677889,nathanpang@gmail.com,nathan777
+S034,Beh Hooi Ching,0173344556,hooichingbeh@gmail.com,oliverpass
+S035,Patrick Ooi,0188899001,patrickooi@gmail.com,patrick888
+S036,Boo Mei Hao,0135566778,mhboo@gmail.com,quentin123
+S037,Ray Lou Mou,0167788990,rayloumou@gmail.com,raypass999
+S038,Sean,0128899001,sean@gmail.com,sean12345
+S039,Kua Chi Hong,0152233445,timothykua@gmail.com,timothy88
+S040,Gan Na Sai,01166778899,victorgan@gmail.com,victorpass
+S041,Wayne,0143344556,wayne@gmail.com,wayne1234
+S042,Xavier,0192233445,xavierchin@gmail.com,xavier888
+S043,Rafi Mohammed,0175566778,ayon@gmail.com,yusufpass7
+S044,Pu Tang,0187788990,putang@gmail.com,zach12345
+S045,Adrian Sim,0138899001,adriansim@gmail.com,adrian999
+S046,Alec Benjamin,0163344556,benjamin@gmail.com,benpass88
+S047,Calvin Tang,0122233445,calvintang@gmail.com,calvin2024
+S048,Khor Jia Yi,0158899001,jykhor@gmail.com,derrick123
+S049,Low Jia Ning,01188990011,edwardlow@gmail.com,edwardpass
+S050,Frank Ocean,0147788990,oceanfrank@gmail.com,frankie888

@@ -83,10 +83,7 @@ void viewPropertyStudent()//main fucntion
         // Display 5 properties at a time
         if (displayed == 5)
         {
-            cout << "\nPress [Enter] to view more...";
-
-            cin.ignore(1000, '\n');
-            cin.get();
+            system("pause");
 
             displayed = 0;
 
@@ -104,10 +101,7 @@ void viewPropertyStudent()//main fucntion
     else
     {
         cout << "\nEnd of property list." << endl;
-        cout << "Press [Enter] to return...";
-
-        cin.ignore(1000, '\n');
-        cin.get();
+        system("pause");
     }
 
     file.close();

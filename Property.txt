@@ -1,2 +1,50 @@
 P001,Master,Scotpine Condo,Sungai Long,650,75,5,A001,Kelwin Tan,0112223334,Agent
 P002,Middle,Forest Green,Sungai Long,500,50,10,O001,OwnerA,0199987776,Owner
+P003,Small,Cypress Condo,Kajang,450,88.5,3.2,A002,Jason Lee,0123456789,Agent
+P004,Master,Sungai Long Residence,Sungai Long,900,142.0,1.5,O002,Raymond Tan,0123456789,Owner
+P005,Middle,Green Arce,Cheras,580,115.3,8.4,A003,Marcus Wong Teck,0139876543,Agent
+P006,Small,Flora Green,Sungai Long,420,95.0,2.1,O003,Steven Lee Kah,0139876543,Owner
+P007,Master,SL4,Kajang,780,135.5,12.0,A004,David Chen,0171122334,Agent
+P008,Middle,SL2,Sungai Long,510,108.2,4.6,O004,Benjamin Wong,0171122334,Owner
+P009,Small,Sutera Pines,Cheras,490,82.4,15.3,A005,Kevin Ang Kah Seng,0165544332,Agent
+P010,Master,Lobak Residence,Kajang,850,148.8,9.7,O005,Patrick Chen Wei,0165544332,Owner
+P011,Middle,Nusa Bestari,Cheras,620,118.0,18.2,A006,Alvin Tay,0198877665,Agent
+P012,Small,SL2,Sungai Long,400,90.6,0.8,O006,Daniel Goh,0198877665,Owner
+P013,Master,Scotpine Condo,Cheras,720,131.2,11.5,A007,Lucas Goh Peng,01133445566,Agent
+P014,Middle,Cypress Condo,Sungai Long,550,105.7,2.8,O007,Christopher Teoh Kian,01133445566,Owner
+P015,Small,Forest Green,Kajang,430,98.3,7.4,A008,Ryan Teoh,0142233445,Agent
+P016,Master,Forest Green,Sungai Long,950,145.0,3.5,O008,Francis Low,0142233445,Owner
+P017,Middle,Sungai Long Residence,Cheras,600,112.9,14.1,A009,Justin Low Kian,0189988776,Agent
+P018,Small,Green Arce,Kajang,460,84.1,8.9,O009,Gregory Sim Boon,0189988776,Owner
+P019,Master,Flora Green,Sungai Long,880,138.4,1.2,A010,Bryan Sim Boon Liang,0126677889,Agent
+P020,Middle,SL4,Sungai Long,530,119.5,4.0,O010,Harrison Ho,0126677889,Owner
+P021,Small,SL2,Kajang,410,91.7,10.6,A011,Alex Ho,0154455667,Agent
+P022,Master,Sutera Pines,Cheras,920,140.6,16.8,A012,Kenneth Lau Chee,0137788990,Agent
+P023,Middle,Lobak Residence,Kajang,570,102.3,6.3,A013,Ivan Ng,0162233441,Agent
+P024,Small,Nusa Bestari,Cheras,480,89.2,19.5,A014,Aaron Chong Wei,01199887766,Agent
+P025,Master,LKCFES,Sungai Long,1000,149.5,0.5,A015,Nicholas Lim Chun,0176655443,Agent
+P026,Middle,Scotpine Condo,Sungai Long,540,114.6,3.0,O001,OwnerA,0199987776,Owner
+P027,Small,Cypress Condo,Cheras,470,86.8,13.7,O002,Raymond Tan,0123456789,Owner
+P028,Master,Forest Green,Kajang,820,133.0,9.1,O003,Steven Lee Kah,0139876543,Owner
+P029,Middle,SL4,Sungai Long,590,109.8,2.5,O004,Benjamin Wong,0171122334,Owner
+P030,Small,Sungai Long Residence,Sungai Long,440,99.4,1.8,O005,Patrick Chen Wei,0165544332,Owner
+P031,Master,Green Arce,Cheras,760,137.9,12.4,A001,Kelwin Tan,0112223334,Agent
+P032,Middle,Flora Green,Sungai Long,520,101.5,3.9,A002,Jason Lee,0123456789,Agent
+P033,Small,SL2,Kajang,400,81.0,6.7,A003,Marcus Wong Teck,0139876543,Agent
+P034,Master,Sutera Pines,Cheras,890,146.3,17.2,A004,David Chen,0171122334,Agent
+P035,Middle,Lobak Residence,Kajang,610,116.7,8.0,A005,Kevin Ang Kah Seng,0165544332,Agent
+P036,Small,Nusa Bestari,Cheras,450,93.5,14.8,A006,Alvin Tay,0198877665,Agent
+P037,Master,Sungai Long Residence,Sungai Long,970,143.2,0.9,A007,Lucas Goh Peng,01133445566,Agent
+P038,Middle,Scotpine Condo,Kajang,560,107.4,11.1,A008,Ryan Teoh,0142233445,Agent
+P039,Small,Cypress Condo,Sungai Long,430,87.9,2.3,A009,Justin Low Kian,0189988776,Agent
+P040,Master,Forest Green,Sungai Long,840,132.8,4.2,A010,Bryan Sim Boon Liang,0126677889,Agent
+P041,Middle,SL4,Cheras,630,111.0,15.6,O006,Daniel Goh,0198877665,Owner
+P042,Small,Sungai Long Residence,Sungai Long,490,96.1,1.1,O007,Christopher Teoh Kian,01133445566,Owner
+P043,Master,Green Arce,Kajang,790,139.7,7.8,O008,Francis Low,0142233445,Owner
+P044,Middle,Flora Green,Sungai Long,510,104.2,3.3,O009,Gregory Sim Boon,0189988776,Owner
+P045,Small,SL2,Cheras,420,83.6,13.0,O010,Harrison Ho,0126677889,Owner
+P046,Master,Sutera Pines,Cheras,930,147.5,18.9,A011,Alex Ho,0154455667,Agent
+P047,Middle,Lobak Residence,Kajang,640,117.8,5.9,A012,Kenneth Lau Chee,0137788990,Agent
+P048,Small,Nusa Bestari,Cheras,460,92.0,16.4,A013,Ivan Ng,0162233441,Agent
+P049,Master,Sutera Pines,Sungai Long,990,141.9,0.7,A014,Aaron Chong Wei,01199887766,Agent
+P050,Middle,Scotpine Condo,Sungai Long,580,106.1,2.9,A015,Nicholas Lim Chun,0176655443,Agent

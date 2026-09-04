@@ -1,1 +1,10 @@
 O001,OwnerA,0199987776,aowner@gmail.com,thefirstowner
+O002,Raymond Tan,0123456789,raymondtan@gmail.com,ownerpass123
+O003,Steven Lee Kah,0139876543,stevenlee@gmail.com,steven8888
+O004,Benjamin Wong,0171122334,benjaminwong@gmail.com,benowner99
+O005,Patrick Chen Wei,0165544332,patrickchen@gmail.com,patpass2024
+O006,Daniel Goh,0198877665,danielgoh@gmail.com,daniel7777
+O007,Christopher Teoh Kian,01133445566,christeoh@gmail.com,chrispass66
+O008,Francis Low,0142233445,francislow@gmail.com,francis888
+O009,Gregory Sim Boon,0189988776,gregorysim@gmail.com,gregpass123
+O010,Harrison Ho,0126677889,harrisonho@gmail.com,harryowner1
