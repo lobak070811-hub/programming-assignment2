@@ -142,7 +142,7 @@ void saveStudent(Student s)
     }
 }
 
-Student studentList[50];
+Student studentList[100];
 int studentCount = 0;
 
 void arraystudentlist()
