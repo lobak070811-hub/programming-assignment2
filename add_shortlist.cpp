@@ -76,10 +76,7 @@ void addShortlist()
     if (!found)
     {
         cout << "\nProperty ID not found." << endl;
-        cout << "Press [Enter] to return...";
-
-        cin.ignore(1000, '\n');
-        cin.get();
+        system("pause");
 
         return;
     }
@@ -139,10 +136,7 @@ void addShortlist()
     if (alreadyShortlisted)
     {
         cout << "\nYou have already shortlisted this property." << endl;
-        cout << "Press [Enter] to return...";
-
-        cin.ignore(1000, '\n');
-        cin.get();
+        system("pause");
 
         return;
     }
