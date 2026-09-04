@@ -45,6 +45,7 @@ void deleteProperty();
 void viewPropertyPublisher();
 
 void studentMenu();
+void searchProperty();
 void viewPropertyStudent();
 void addShortlist();
 void viewShortlistStudent();

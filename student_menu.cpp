@@ -29,7 +29,7 @@ void studentMenu()//main function
                 break;
 
             case 2:
-                //searchProperty();
+                searchProperty();
                 break;
 
             case 3:
