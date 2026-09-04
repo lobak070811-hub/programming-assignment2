@@ -37,7 +37,7 @@ void studentMenu()//main function
                 break;
                 
             case 4:
-            	//viewShortListStudent();
+            	viewShortlistStudent();
             	break;
 
             case 5:

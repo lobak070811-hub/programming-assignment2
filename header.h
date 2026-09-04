@@ -47,5 +47,6 @@ void viewPropertyPublisher();
 void studentMenu();
 void viewPropertyStudent();
 void addShortlist();
+void viewShortlistStudent();
 
 #endif //end code
