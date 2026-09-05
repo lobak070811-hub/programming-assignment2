@@ -64,4 +64,6 @@ void viewEnquiriesReply()
     {
         cout << "\nYou have not sent any enquiries yet." << endl;
     }
+    
+    system("pause");
 }

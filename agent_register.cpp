@@ -141,6 +141,8 @@ void saveAgent(Agent a)
     {
         cout << "Cannot open file.\n";
     }
+    
+    system("pause");
 }
 
 Agent agentList[50];
@@ -185,5 +187,5 @@ void displayAgent(Agent a)
     cout << "Phone    : " << a.phone << endl;
     cout << "Email    : " << a.email << endl;
 
-    cout << "============================================\n";
+    cout << "============================================\n\n";
 }

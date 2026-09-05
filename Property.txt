@@ -48,3 +48,4 @@ P047,Middle,Lobak Residence,Kajang,640,117.8,5.9,A012,Kenneth Lau Chee,013778899
 P048,Small,Nusa Bestari,Cheras,460,92.0,16.4,A013,Ivan Ng,0162233441,Agent
 P049,Master,Sutera Pines,Sungai Long,990,141.9,0.7,A014,Aaron Chong Wei,01199887766,Agent
 P050,Middle,Scotpine Condo,Sungai Long,580,106.1,2.9,A015,Nicholas Lim Chun,0176655443,Agent
+P051,Master,Scotpine Condo,Kajang,1000,140,0.5,A001,Kelwin Tan,0112223334,Agent

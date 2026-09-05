@@ -208,6 +208,8 @@ void inputEnquiry()
     file.close();
 
     displaySentEnquiry(e);
+    
+    system("pause");
 }
 
 void displaySentEnquiry(const Enquiry &e)
@@ -216,12 +218,12 @@ void displaySentEnquiry(const Enquiry &e)
     cout << "       ENQUIRY SENT SUCCESSFULLY" << endl;
     cout << "========================================" << endl;
 
-    cout << "Enquiry ID  : " << e.enquiryID << endl;
-    cout << "Student ID  : " << e.studentID << endl;
-    cout << "Property ID : " << e.propertyID << endl;
-    cout << "Publisher ID: " << e.publisherID << endl;
-    cout << "Question    : " << e.question << endl;
-    cout << "Status      : No reply yet." << endl;
+    cout << "Enquiry ID   : " << e.enquiryID << endl;
+    cout << "Student ID   : " << e.studentID << endl;
+    cout << "Property ID  : " << e.propertyID << endl;
+    cout << "Publisher ID : " << e.publisherID << endl;
+    cout << "Question     : " << e.question << endl;
+    cout << "Status       : No reply yet." << endl;
 
     cout << "========================================" << endl;
 }

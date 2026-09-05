@@ -122,7 +122,9 @@ void deleteProperty()//main function
     remove("Property.txt");
     rename("Property_temp.txt", "Property.txt");
 
-    cout << "\nProperty deleted successfully!\n";
+    cout << "\nProperty deleted successfully!\n\n";
+    
+    system("pause");
 }
 
 // Read property information from one line

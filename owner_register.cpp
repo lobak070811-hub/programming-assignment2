@@ -140,6 +140,8 @@ void saveOwner(Owner o)
     {
         cout << "Cannot open file.\n";
     }
+    
+    system("pause");
 }
 
 Owner ownerList[50];
@@ -184,5 +186,5 @@ void displayOwner(Owner o)
     cout << "Phone    : " << o.phone << endl;
     cout << "Email    : " << o.email << endl;
 
-    cout << "============================================\n";
+    cout << "============================================\n\n";
 }

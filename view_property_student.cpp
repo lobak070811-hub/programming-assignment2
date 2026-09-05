@@ -101,8 +101,9 @@ void viewPropertyStudent()//main fucntion
     else
     {
         cout << "\nEnd of property list." << endl;
-        system("pause");
     }
 
     file.close();
+    
+    system("pause");
 }

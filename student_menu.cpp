@@ -58,5 +58,5 @@ void studentMenu()//main function
                 cout << "\nInvalid choice. Please try again." << endl;
         }
 
-    } while(choice != 5);
+    } while(choice != 7);
 }

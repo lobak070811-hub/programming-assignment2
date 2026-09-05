@@ -40,6 +40,8 @@ void renewProperty()//main function
 	saveProperties(); 
 	
 	displayUpdatedProperty(); 
+	
+	system("pause");
 }
 
 void inputPropertyID() 
@@ -191,5 +193,5 @@ void displayUpdatedProperty()
 	cout << "Role           : " << updatedProperty.publisherRole << endl; 
 	cout << "Phone          : " << updatedProperty.publisherPhone << endl;
 	
-	cout << "====================================\n"; 
+	cout << "====================================\n\n"; 
 }

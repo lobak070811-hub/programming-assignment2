@@ -162,6 +162,8 @@ void inputProperty()
     file.close();
     
     displayCurrentInputProperty(p);
+    
+    system("pause");
 }
 
 void displayCurrentInputProperty(const Property &p)
@@ -182,5 +184,5 @@ void displayCurrentInputProperty(const Property &p)
     cout << "Role            : " << p.publisherRole << endl;
     cout << "Phone           : " << p.publisherPhone << endl;
 
-    cout << "====================================\n";
+    cout << "====================================\n\n";
 }

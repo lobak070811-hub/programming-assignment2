@@ -56,7 +56,7 @@ void viewEnquiries()
             cout << "Question    : " << e.question << endl;
             cout << "Reply       : " << e.reply << endl;
 
-            cout << "----------------------------------------" << endl;
+            cout << "----------------------------------------\n" << endl;
         }
     }
 
@@ -66,4 +66,6 @@ void viewEnquiries()
     {
         cout << "\nNo enquiries received." << endl;
     }
+    
+    system("pause");
 }

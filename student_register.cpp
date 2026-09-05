@@ -140,6 +140,8 @@ void saveStudent(Student s)
     {
         cout << "Cannot open file.\n";
     }
+    
+    system("pause");
 }
 
 Student studentList[100];
@@ -184,5 +186,5 @@ void displayStudent(Student s)
     cout << "Phone    : " << s.phone << endl;
     cout << "Email    : " << s.email << endl;
 
-    cout << "============================================\n";
+    cout << "============================================\n\n";
 }

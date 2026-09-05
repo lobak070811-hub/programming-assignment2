@@ -165,7 +165,7 @@ void loginMenu()//main function
     	
         cout << "\nLogin Successful!\n";
         cout << "Welcome, " << currentName << "!\n";
-
+    	
         agentPropertyMenu();
 
         return;
@@ -173,4 +173,6 @@ void loginMenu()//main function
     // If no matching ID + Password
     cout << "\nLogin Failed!\n";
     cout << "Incorrect ID or Password.\n";
+    
+    system("pause");
 }

@@ -66,10 +66,10 @@ void replyEnquiries()
 
             cout << "\n----------------------------------------" << endl;
 
-            cout << "Enquiry ID  : " << enquiries[i].enquiryID << endl;
-            cout << "Student ID  : " << enquiries[i].studentID << endl;
-            cout << "Property ID : " << enquiries[i].propertyID << endl;
-            cout << "Question    : " << enquiries[i].question << endl;
+            cout << "Enquiry ID   : " << enquiries[i].enquiryID << endl;
+            cout << "Student ID   : " << enquiries[i].studentID << endl;
+            cout << "Property ID  : " << enquiries[i].propertyID << endl;
+            cout << "Question     : " << enquiries[i].question << endl;
             cout << "Current Reply: " << enquiries[i].reply << endl;
 
             cout << "----------------------------------------" << endl;
@@ -134,5 +134,7 @@ void replyEnquiries()
 
     cout << "\n========================================" << endl;
     cout << "          REPLY SENT SUCCESSFULLY" << endl;
-    cout << "========================================" << endl;
+    cout << "========================================\n" << endl;
+    
+    system("pause");
 }
