@@ -22,6 +22,16 @@ struct Property
     string publisherRole;
 };
 
+struct Enquiry
+{
+    string enquiryID;
+    string studentID;
+    string propertyID;
+    string publisherID;
+    string question;
+    string reply;
+};
+
 extern string currentID;
 extern string currentName;
 extern string currentPhone;
@@ -49,5 +59,10 @@ void searchProperty();
 void viewPropertyStudent();
 void addShortlist();
 void viewShortlistStudent();
+
+void sendEnquiry();
+void viewEnquiriesReply();
+void viewEnquiries();
+void replyEnquiries();
 
 #endif //end code

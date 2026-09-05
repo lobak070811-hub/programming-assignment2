@@ -17,7 +17,9 @@ void studentMenu()//main function
         cout << "2. Search Property" << endl;
         cout << "3. Add Shortlist" << endl;
         cout << "4. View Shortlist" << endl;
-        cout << "5. Logout" << endl;
+        cout << "5. Send Enquiry" << endl;
+        cout << "6. View Reply" << endl;
+        cout << "7. Logout" << endl;
         cout << "========================================" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -39,8 +41,16 @@ void studentMenu()//main function
             case 4:
             	viewShortlistStudent();
             	break;
-
+            	
             case 5:
+            	sendEnquiry();
+            	break;
+            	
+            case 6:
+            	viewEnquiriesReply();
+            	break;
+
+            case 7:
                 cout << "\nLogging out..." << endl;
                 break;
 
