@@ -1,0 +1,2 @@
+E001|S002|P001|A001|Does Wifi provided?|No,you need to use your data
+E002|S002|P031|A001|Does water heater provided?|No reply yet.
