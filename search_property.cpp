@@ -24,8 +24,8 @@ void searchProperty()//main function
 {
     bool selectedRoom[3];
 
-    string selectedNames[100];
-    int selectedNameCount;
+    string selectedNames[100];//which property name does student choose
+    int selectedNameCount;//how much property name does student choose
 
     bool usePrice;
     bool useDistance;
@@ -61,7 +61,8 @@ void selectRoomType(bool selectedRoom[])
 {
     int choice;
     char again;
-
+	
+	//initialize the choice as false
     selectedRoom[0] = false;
     selectedRoom[1] = false;
     selectedRoom[2] = false;
@@ -109,7 +110,7 @@ int getPropertyNames(string propertyNames[])
     }
 
     string line;
-    int nameCount = 0;
+    int nameCount = 0;//initialize the number of property name
 
     while (getline(file, line))
     {
@@ -139,28 +140,28 @@ int getPropertyNames(string propertyNames[])
         getline(ss, p.publisherPhone, ',');
         getline(ss, p.publisherRole, ',');
 
-        // Check whether property name already exists
+        //Check whether property name already exists, initialize it doesn't exist at first
         bool duplicate = false;
 
         for (int i = 0; i < nameCount; i++)
         {
             if (propertyNames[i] == p.propertyName)
             {
-                duplicate = true;
+                duplicate = true;//The property name is already exist
                 break;
             }
         }
 
-        if (!duplicate && nameCount < 100)
+        if (!duplicate && nameCount < 100)//if no exist
         {
-            propertyNames[nameCount] = p.propertyName;
+            propertyNames[nameCount] = p.propertyName;//save into array
             nameCount++;
         }
     }
 
     file.close();
 
-    return nameCount;
+    return nameCount;//the numbers of property name do text file have
 }
 
 int selectPropertyName(string selectedNames[])
@@ -252,7 +253,7 @@ void inputPriceRange(bool &usePrice, double &minPrice, double &maxPrice)
         return;
     }
 
-    usePrice = true;
+    usePrice = true;//using pass-by-reference, return value but not 'true'
 
     while (true)
     {
