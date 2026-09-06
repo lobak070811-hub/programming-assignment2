@@ -95,6 +95,8 @@ void addSchedule()
     cout << "Day         : " << s.day << endl;
     cout << "Time        : " << s.startTime
          << " - " << s.endTime << endl;
+         
+	system("pause");
 }
 
 string defaultScheduleID()

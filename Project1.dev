@@ -281,7 +281,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit24]
-FileName=edit_schedule.cpp
+FileName=edit_schedule_menu.cpp
 CompileCpp=1
 Folder=
 Compile=1

@@ -62,4 +62,6 @@ void viewSchedule()
     }
 
     cout << endl;
+    
+    system("pause");
 }

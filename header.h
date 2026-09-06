@@ -92,7 +92,7 @@ void replyEnquiries();
 void giveReview();
 void displayPropertyReview(string propertyID);
 
-void editSchedule();
+void editScheduleMenu();
 void addSchedule();
 void deleteSchedule();
 void viewSchedule();

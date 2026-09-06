@@ -60,7 +60,7 @@ void ownerPropertyMenu()
             	break;
             	
             case 7:
-            	editSchedule();
+            	editScheduleMenu();
             	break;
             	
             case 8:

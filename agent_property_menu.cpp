@@ -60,7 +60,7 @@ void agentPropertyMenu()
             	break;
             	
             case 7:
-            	editSchedule();
+            	editScheduleMenu();
             	break;
             	
             case 8:

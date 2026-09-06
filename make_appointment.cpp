@@ -123,6 +123,8 @@ void makeAppointment()//main function
 
         return;
     }
+    
+    system("pause");
 
     // Ask Property ID
     string propertyID;
@@ -191,6 +193,8 @@ void makeAppointment()//main function
          << a.startTime << " - "
          << a.endTime << endl;
     cout << "Status         : Pending\n";
+    
+    system("pause");
 }
 
 string defaultAppointmentID()
