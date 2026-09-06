@@ -1,0 +1,100 @@
+R001|S002|P001|5|I love his muscles
+R002|S015|P012|4|Spacious room and good location, very convenient.
+R003|S008|P005|1|Terrible soundproofing, neighbors are way too noisy.
+R004|S042|P033|3|Average place, acceptable for a short stay.
+R005|S023|P001|5|Great landlord and clean living conditions!
+R006|S011|P045|2|Water pressure in the shower is extremely low.
+R007|S004|P020|4|Pretty good study environment, quiet at night.
+R008|S039|P018|5|Super fast Wi-Fi and modern furniture.
+R009|S050|P051|1|Aircon is leaking and landlord refuses to fix it.
+R010|S007|P009|3|Okay for the price, but the bathroom is small.
+R011|S031|P027|4|Nice balcony view and close to public transport.
+R012|S019|P003|2|Too far from campus, bus takes forever.
+R013|S005|P014|5|Cozy atmosphere, feels like home.
+R014|S048|P038|1|Dirty kitchen with roaches, moving out soon!
+R015|S012|P022|4|Well maintained facilities, clean gym downstairs.
+R016|S027|P011|3|Decent room, but parking is a nightmare.
+R017|S003|P049|5|Amazing experience, highly recommended!
+R018|S035|P006|2|The mattress is super uncomfortable and stiff.
+R019|S016|P031|4|Good security system, felt very safe.
+R020|S044|P015|1|Deposit refund was unfairly deducted. Bad experience.
+R021|S001|P040|5|Very bright room with big windows.
+R022|S029|P002|3|Fairly standard student accommodation.
+R023|S038|P025|4|Quiet surroundings, good for studying.
+R024|S010|P047|1|Power outage happened twice this month.
+R025|S021|P008|5|Walking distance to the university, perfect!
+R026|S045|P019|2|Old building, elevators break down frequently.
+R027|S017|P036|4|Clean common areas and polite flatmates.
+R028|S009|P004|3|Room is smaller than what was shown in photos.
+R029|S033|P013|5|Best rental experience so far!
+R030|S026|P050|1|Smells like mold inside the wardrobe.
+R031|S014|P029|4|Reasonable rent including all utility bills.
+R032|S041|P007|2|Street traffic noise is unbearable at night.
+R033|S006|P021|5|Prompt response from property manager.
+R034|S030|P042|3|Basic amenities provided, nothing fancy.
+R035|S047|P016|1|Washing machine has been broken for weeks.
+R036|S022|P035|4|Friendly neighborhood with lots of food options.
+R037|S018|P028|5|Loved the interior design and lighting.
+R038|S037|P010|2|Poor internet connection during peak hours.
+R039|S002|P044|4|Spacious living area, great for group study.
+R040|S025|P003|1|Landlord entered the room without prior notice.
+R041|S049|P030|5|Convenient store right downstairs!
+R042|S013|P017|3|Neutral stay, nothing to complain about much.
+R043|S034|P048|4|Good value for money in this area.
+R044|S008|P023|2|Hot water heater takes way too long to heat up.
+R045|S043|P005|5|Clean, quiet, and very peaceful.
+R046|S020|P039|1|Terrible experience, bad smell from drainage.
+R047|S032|P012|4|Comfy bed and nice desk for working.
+R048|S004|P034|3|It's okay, but kitchen tools are outdated.
+R049|S028|P001|5|Super close to grocery stores!
+R050|S015|P046|2|Poor ventilation in the bathroom.
+R051|S040|P026|4|Fast maintenance team, fixed my door lock quickly.
+R052|S024|P018|1|Unfriendly security guards, difficult entrance rules.
+R053|S007|P041|5|Very cozy room, loved staying here.
+R054|S036|P014|3|Standard quality, average price.
+R055|S011|P032|4|Spacious wardrobe and plenty of storage.
+R056|S046|P009|2|Dusty when checked in, needed deep cleaning.
+R057|S003|P002|5|Excellent environment and clear contract terms.
+R058|S019|P037|1|Frequent water supply disruptions.
+R059|S042|P020|4|Good natural lighting in the afternoon.
+R060|S027|P051|3|Slightly expensive for the space provided.
+R061|S001|P015|5|Will definitely renew my lease next term!
+R062|S031|P004|2|Walls are thin, can hear neighbors talking.
+R063|S016|P024|4|Clean fridge and working microwave.
+R064|S039|P043|1|Rats spotted in the garbage area.
+R065|S010|P011|5|Very peaceful at night, slept well.
+R066|S023|P033|3|Acceptable distance to public transit.
+R067|S048|P006|4|Nice study desk and ergonomic chair.
+R068|S005|P027|2|A/C unit makes a loud rattling noise.
+R069|S035|P049|5|Landlord brought us welcome snacks, so sweet!
+R070|S012|P016|1|Charged extra fees without proper explanation.
+R071|S044|P022|4|Overall satisfied with the environment.
+R072|S021|P007|3|Room temperature gets quite high in summer.
+R073|S050|P038|5|Cleanest student unit I have seen so far.
+R074|S017|P013|2|Drying clothes area is too small.
+R075|S029|P045|4|Good water pressure and fast heater.
+R076|S009|P029|1|Keycard often malfunctions at the main door.
+R077|S041|P008|5|Everything is working perfectly.
+R078|S026|P035|3|Fine place if you are on a tight budget.
+R079|S014|P019|4|Safe neighborhood with street lights.
+R080|S038|P050|2|Sofa in common area is dirty and stained.
+R081|S006|P025|5|Extremely responsive landlord!
+R082|S033|P010|1|Trash bins outside are always overflowing.
+R083|S045|P047|4|Spacious layout and good airflow.
+R084|S018|P003|3|Bus station is near, but area is quiet.
+R085|S030|P031|5|Strong Wi-Fi, perfect for online exams.
+R086|S047|P017|2|Shower head was broken upon arrival.
+R087|S022|P040|4|Pretty good price for a single room.
+R088|S037|P028|1|Plumbing issues in the kitchen sink.
+R089|S002|P012|5|Clean room, pleasant stay overall!
+R090|S025|P044|3|Decent room size, slightly old furniture.
+R091|S049|P021|4|Good air circulation and fresh air.
+R092|S013|P036|2|Noisy construction work nearby every morning.
+R093|S034|P005|5|Super friendly housemates and clean house.
+R094|S008|P048|1|Felt unsafe at night around the entrance.
+R095|S043|P030|4|Nice curtains and good privacy.
+R096|S020|P014|3|Average experience, nothing special.
+R097|S032|P042|5|Very convenient location for students.
+R098|S004|P009|2|Slow Wi-Fi speed at night.
+R099|S028|P026|4|Clean floor and fresh paint on walls.
+R100|S040|P001|1|Horrible service, landlord is extremely rude.
