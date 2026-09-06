@@ -79,6 +79,8 @@ void viewPropertyStudent()//main fucntion
         cout << "Phone       : " << p.publisherPhone << endl;
         cout << "Role        : " << p.publisherRole << endl;
         cout << "----------------------------------------" << endl;
+        
+        displayPropertyReview(p.propertyID);
 
         // Display 5 properties at a time
         if (displayed == 5)

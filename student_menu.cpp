@@ -19,7 +19,8 @@ void studentMenu()//main function
         cout << "4. View Shortlist" << endl;
         cout << "5. Send Enquiry" << endl;
         cout << "6. View Reply" << endl;
-        cout << "7. Logout" << endl;
+        cout << "7. Give review to Property" << endl;
+        cout << "8. Logout" << endl;
         cout << "========================================" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -49,8 +50,12 @@ void studentMenu()//main function
             case 6:
             	viewEnquiriesReply();
             	break;
-
+            	
             case 7:
+            	giveReview();
+            	break;
+
+            case 8:
                 cout << "\nLogging out..." << endl;
                 break;
 
@@ -58,5 +63,5 @@ void studentMenu()//main function
                 cout << "\nInvalid choice. Please try again." << endl;
         }
 
-    } while(choice != 7);
+    } while(choice != 8);
 }

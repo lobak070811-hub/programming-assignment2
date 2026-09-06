@@ -492,6 +492,8 @@ void displaySearchResult(bool selectedRoom[], string selectedNames[], int select
         cout << "Phone       : " << p.publisherPhone << endl;
         cout << "Role        : " << p.publisherRole << endl;
         cout << "----------------------------------------" << endl;
+        
+        displayPropertyReview(p.propertyID);
     }
 
     file.close();

@@ -145,6 +145,8 @@ void viewShortlistStudent()
                 cout << "Role        : " << p.publisherRole << endl;
 
                 cout << "----------------------------------------" << endl;
+                
+                displayPropertyReview(p.propertyID);
 
                 break;
             }

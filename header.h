@@ -65,4 +65,7 @@ void viewEnquiriesReply();
 void viewEnquiries();
 void replyEnquiries();
 
+void giveReview();
+void displayPropertyReview(string propertyID);
+
 #endif //end code
