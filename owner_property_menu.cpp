@@ -25,7 +25,9 @@ void ownerPropertyMenu()
         cout << "4. View My Properties\n";
         cout << "5. View Enquiries\n";
         cout << "6. Reply Enquiries\n";
-        cout << "7. Log out\n";
+        cout << "7. Edit house viewing schedules\n";
+        cout << "8. Check appointment\n";
+        cout << "9. Log out\n";
         cout << "------------------------------------\n";
 
         cout << "Enter your choice: ";
@@ -56,8 +58,16 @@ void ownerPropertyMenu()
             case 6:
             	replyEnquiries();
             	break;
-
+            	
             case 7:
+            	editSchedule();
+            	break;
+            	
+            case 8:
+            	checkAppointment();
+            	break;
+
+            case 9:
                 cout << "\nLogging out...\n";
 
                 //destroy the temporary storage 

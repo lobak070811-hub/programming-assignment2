@@ -32,6 +32,30 @@ struct Enquiry
     string reply;
 };
 
+struct Schedule
+{
+    string scheduleID;
+    string publisherID;
+    string day;
+    string startTime;
+    string endTime;
+};
+
+struct Appointment
+{
+    string appointmentID;
+    string studentID;
+    string publisherID;
+    string propertyID;
+    string scheduleID;
+    string date;
+    string day;
+    string startTime;
+    string endTime;
+    string status;
+    string reason;
+};
+
 extern string currentID;
 extern string currentName;
 extern string currentPhone;
@@ -67,5 +91,14 @@ void replyEnquiries();
 
 void giveReview();
 void displayPropertyReview(string propertyID);
+
+void editSchedule();
+void addSchedule();
+void deleteSchedule();
+void viewSchedule();
+
+void makeAppointment();
+void checkAppointment();
+void checkAppointmentStatus();
 
 #endif //end code
