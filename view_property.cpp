@@ -48,6 +48,8 @@ void viewPropertyPublisher()//main function
             }
         }
     }
+    
+    void displayPropertyReview(string propertyID);
 
     file.close();
 
