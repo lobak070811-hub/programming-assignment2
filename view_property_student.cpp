@@ -5,10 +5,14 @@
 #include <sstream>
 #include <string>
 #include <cstdlib>
+#include <iomanip>
+#include <cctype>
 
 using namespace std;
 
-void viewPropertyStudent()//main fucntion
+bool readPropertyStudent(string line, Property &p);
+
+void viewPropertyStudent()
 {
     ifstream file("Property.txt");
 
@@ -21,11 +25,8 @@ void viewPropertyStudent()//main fucntion
     string line;
 
     int count = 0;
-    int displayed = 0;
 
-    cout << "\n========================================" << endl;
-    cout << "             PROPERTY LIST" << endl;
-    cout << "========================================" << endl;
+    char choice;
 
     while (getline(file, line))
     {
@@ -37,75 +38,88 @@ void viewPropertyStudent()//main fucntion
 
         Property p;
 
-        string price;
-        string area;
-        string distance;
-        string publisherID;
-
-        stringstream ss(line);
-
-        // Read data from Property.txt
-        getline(ss, p.propertyID, ',');
-        getline(ss, p.roomType, ',');
-        getline(ss, p.propertyName, ',');
-        getline(ss, p.location, ',');
-        getline(ss, price, ',');
-        getline(ss, area, ',');
-        getline(ss, distance, ',');
-        getline(ss, publisherID, ',');
-        getline(ss, p.publisherName, ',');
-        getline(ss, p.publisherPhone, ',');
-        getline(ss, p.publisherRole, ',');
-
-        // Convert string to number
-        p.price = atof(price.c_str());
-        p.area = atof(area.c_str());
-        p.distance = atof(distance.c_str());
-        p.publisherID = atoi(publisherID.c_str());
+        // Read property information
+        if (!readPropertyStudent(line, p))
+        {
+            continue;
+        }
 
         count++;
-        displayed++;
 
-        cout << "\nProperty " << count << endl;
-        cout << "----------------------------------------" << endl;
+        cout << "\n========================================\n";
+        cout << "              PROPERTY " << count << endl;
+        cout << "========================================\n";
+
         cout << "Property ID : " << p.propertyID << endl;
         cout << "Room Type   : " << p.roomType << endl;
         cout << "Property    : " << p.propertyName << endl;
         cout << "Location    : " << p.location << endl;
-        cout << "Price       : RM " << p.price << endl;
-        cout << "Area        : " << p.area << " sqft" << endl;
-        cout << "Distance    : " << p.distance << " km" << endl;
-        cout << "Publisher   : " << p.publisherName << endl;
+        cout << "Price       : RM " << fixed << setprecision(2) << p.price << endl;
+        cout << "Area        : " << fixed << setprecision(2) << p.area << " sqft" << endl;
+        cout << "Distance    : " << fixed << setprecision(2) << p.distance << " km" << endl;
+        cout << "Publisher   : " << p.publisherName << endl; 
         cout << "Phone       : " << p.publisherPhone << endl;
         cout << "Role        : " << p.publisherRole << endl;
+
         cout << "----------------------------------------" << endl;
-        
+
         displayPropertyReview(p.propertyID);
 
-        // Display 5 properties at a time
-        if (displayed == 5)
+        cout << "\nView next property? (Yes(y)/No(n)): ";
+        cin >> choice;
+
+        choice = toupper(choice);
+
+        while (choice != 'Y' && choice != 'N' && choice != 'y' && choice != 'n')
         {
-            system("pause");
+            cout << "\nInvalid input.";
+            cout << "\nPlease enter Y or N: ";
 
-            displayed = 0;
+            cin >> choice;
 
-            cout << "\n========================================" << endl;
-            cout << "             PROPERTY LIST" << endl;
-            cout << "========================================" << endl;
+            choice = toupper(choice);
+        }
+
+        if (choice == 'N' || choice == 'n')
+        {
+            cout << "\nReturning to Student Menu...\n";
+            break;
         }
     }
 
-    // No property found
     if (count == 0)
     {
         cout << "\nNo property available." << endl;
     }
-    else
-    {
-        cout << "\nEnd of property list." << endl;
-    }
 
     file.close();
-    
-    system("pause");
+}
+
+bool readPropertyStudent(string line, Property &p)
+{
+    stringstream ss(line);
+
+    string price;
+    string area;
+    string distance;
+
+    getline(ss, p.propertyID, ',');
+    getline(ss, p.roomType, ',');
+    getline(ss, p.propertyName, ',');
+    getline(ss, p.location, ',');
+
+    getline(ss, price, ',');
+    getline(ss, area, ',');
+    getline(ss, distance, ',');
+
+    getline(ss, p.publisherID, ',');
+    getline(ss, p.publisherName, ',');
+    getline(ss, p.publisherPhone, ',');
+    getline(ss, p.publisherRole);
+
+    p.price = atof(price.c_str());
+    p.area = atof(area.c_str());
+    p.distance = atof(distance.c_str());
+
+    return true;
 }

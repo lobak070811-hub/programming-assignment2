@@ -52,7 +52,7 @@ void viewAveragePrice() // main function
 
         while (true)
         {
-            cout << "\nEnter lower distance: ";
+            cout << "\nEnter lower distance(km): ";
             cin >> lowerBound;
 
             // Check lower distance
@@ -71,7 +71,7 @@ void viewAveragePrice() // main function
 
         while (true)
         {
-            cout << "Enter upper distance: ";
+            cout << "Enter upper distance(km): ";
             cin >> upperBound;
 
             if (upperBound < 0)
@@ -120,7 +120,7 @@ void viewAveragePrice() // main function
 
         continueChoice = toupper(continueChoice);
 
-    } while (continueChoice == 'Y');
+    } while (continueChoice == 'Y' || continueChoice == 'y');
 
     cout << "\nReturning to previous menu...\n";
 }

@@ -187,8 +187,6 @@ void displayPropertyReview(string propertyID)
              << averageRating << " / 5";
         cout << "\n----------------------------------------\n";
     }
-    
-    system("pause");
 }
 
 void givePropertyReview()

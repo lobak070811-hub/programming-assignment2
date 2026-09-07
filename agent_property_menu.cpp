@@ -10,6 +10,7 @@ void agentPropertyMenu()
 
     while (true)
     {
+    	system("cls");
         cout << "\n====================================\n";
         cout << "              AGENT MENU\n";
         cout << "====================================\n";

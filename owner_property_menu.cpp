@@ -10,6 +10,7 @@ void ownerPropertyMenu()
 
     while (true)
     {
+    	system("cls");
         cout << "\n====================================\n";
         cout << "              OWNER MENU\n";
         cout << "====================================\n";

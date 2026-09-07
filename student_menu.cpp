@@ -10,6 +10,7 @@ void studentMenu()//main function
 
     do
     {
+    	system("cls");
         cout << "\n========================================" << endl;
         cout << "              STUDENT MENU" << endl;
         cout << "========================================" << endl;
