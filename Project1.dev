@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=30
+UnitCount=32
 
 [VersionInfo]
 Major=1
@@ -342,6 +342,26 @@ BuildCmd=
 
 [Unit30]
 FileName=check_appointment_status.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit31]
+FileName=view_profile.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit32]
+FileName=edit_Profile.cpp
 CompileCpp=1
 Folder=
 Compile=1

@@ -12,6 +12,7 @@ using namespace std;
 string currentID;
 string currentName;
 string currentPhone;
+string currentEmail;
 string currentRole;
 
 void getUserInfo(string filename, string inputID, string &name, string &phone)

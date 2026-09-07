@@ -19,15 +19,16 @@ void ownerPropertyMenu()
         cout << "Phone : " << currentPhone << endl;
 
         cout << "\n------------------------------------\n";
-        cout << "1. Upload Property\n";
-        cout << "2. Edit Property\n";
-        cout << "3. Delete Property\n";
-        cout << "4. View My Properties\n";
-        cout << "5. View Enquiries\n";
-        cout << "6. Reply Enquiries\n";
-        cout << "7. Edit house viewing schedules\n";
-        cout << "8. Check appointment\n";
-        cout << "9. Log out\n";
+        cout << "1. View Profile\n";
+        cout << "2. Upload Property\n";
+        cout << "3. Edit Property\n";
+        cout << "4. Delete Property\n";
+        cout << "5. View My Properties\n";
+        cout << "6. View Enquiries\n";
+        cout << "7. Reply Enquiries\n";
+        cout << "8. Edit house viewing schedules\n";
+        cout << "9. Check appointment\n";
+        cout << "10. Log out\n";
         cout << "------------------------------------\n";
 
         cout << "Enter your choice: ";
@@ -36,38 +37,42 @@ void ownerPropertyMenu()
         switch (choice)
         {
             case 1:
-                addProperty();
+                viewProfile();
                 break;
-
+                
             case 2:
+            	addProperty();
+            	break;
+
+            case 3:
                 renewProperty();
                 break;
 
-            case 3:
+            case 4:
                 deleteProperty();
                 break;
 
-            case 4:
+            case 5:
                 viewPropertyPublisher();
                 break;
                 
-            case 5:
+            case 6:
             	viewEnquiries();
             	break;
             	
-            case 6:
+            case 7:
             	replyEnquiries();
             	break;
             	
-            case 7:
+            case 8:
             	editScheduleMenu();
             	break;
             	
-            case 8:
+            case 9:
             	checkAppointment();
             	break;
 
-            case 9:
+            case 10:
                 cout << "\nLogging out...\n";
 
                 //destroy the temporary storage 

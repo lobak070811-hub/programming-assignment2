@@ -13,16 +13,17 @@ void studentMenu()//main function
         cout << "\n========================================" << endl;
         cout << "              STUDENT MENU" << endl;
         cout << "========================================" << endl;
-        cout << "1. View Property" << endl;
-        cout << "2. Search Property" << endl;
-        cout << "3. Add Shortlist" << endl;
-        cout << "4. View Shortlist" << endl;
-        cout << "5. Send Enquiry" << endl;
-        cout << "6. View Reply" << endl;
-        cout << "7. Give review to Property" << endl;
-        cout << "8. Make appointment" << endl;
-        cout << "9. Check Appointment Status" << endl;
-        cout << "10. Logout" << endl;
+        cout << "1. View Profile" << endl;
+        cout << "2. View Property" << endl;
+        cout << "3. Search Property" << endl;
+        cout << "4. Add Shortlist" << endl;
+        cout << "5. View Shortlist" << endl;
+        cout << "6. Send Enquiry" << endl;
+        cout << "7. View Reply" << endl;
+        cout << "8. Give review to Property" << endl;
+        cout << "9. Make appointment" << endl;
+        cout << "10. Check Appointment Status" << endl;
+        cout << "11. Logout" << endl;
         cout << "========================================" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -30,42 +31,46 @@ void studentMenu()//main function
         switch(choice)
         {
             case 1:
-                viewPropertyStudent();
+                viewProfile();
                 break;
-
+                
             case 2:
+            	viewPropertyStudent();
+            	break;
+
+            case 3:
                 searchProperty();
                 break;
 
-            case 3:
+            case 4:
                 addShortlist();
                 break;
                 
-            case 4:
+            case 5:
             	viewShortlistStudent();
             	break;
             	
-            case 5:
+            case 6:
             	sendEnquiry();
             	break;
             	
-            case 6:
+            case 7:
             	viewEnquiriesReply();
             	break;
             	
-            case 7:
+            case 8:
             	giveReview();
             	break;
             	
-            case 8:
+            case 9:
             	makeAppointment();
             	break;
             	
-            case 9:
+            case 10:
             	checkAppointmentStatus();
             	break;
 
-            case 10:
+            case 11:
                 cout << "\nLogging out..." << endl;
                 break;
 
@@ -73,5 +78,5 @@ void studentMenu()//main function
                 cout << "\nInvalid choice. Please try again." << endl;
         }
 
-    } while(choice != 10);
+    } while(choice != 11);
 }

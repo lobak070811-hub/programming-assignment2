@@ -59,6 +59,7 @@ struct Appointment
 extern string currentID;
 extern string currentName;
 extern string currentPhone;
+extern string currentEmail;
 extern string currentRole;
 
 //declare function
@@ -70,6 +71,9 @@ void ownerRegister();
 void agentRegister();
 
 void loginMenu();
+
+void viewProfile();
+void editProfile();
 
 void ownerPropertyMenu();
 void agentPropertyMenu();
