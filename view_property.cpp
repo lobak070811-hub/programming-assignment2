@@ -10,6 +10,7 @@ using namespace std;
 
 bool readProperty_view(string line, Property &p);
 void displayProperty_view(const Property &p);
+int countShortlist(string propertyID);
 
 void viewPropertyPublisher()//main function
 {
@@ -44,6 +45,15 @@ void viewPropertyPublisher()//main function
                 found = true;
 
                 displayProperty_view(p);
+                
+                int shortlistCount = countShortlist(p.propertyID);
+
+                cout << "Shortlisted by  : "
+                     << shortlistCount
+                     << " student(s)" << endl;
+
+                cout << "----------------------------------------\n";
+                
                 system("pause");
             }
         }
@@ -58,8 +68,7 @@ void viewPropertyPublisher()//main function
         cout << "\nYou have not published any property yet.\n";
     }
     
-    cout << "\nPress [Enter] to return to the menu...";
-    cin.get();
+    system("pause");
 }
 
 // Read one property from Property.txt
@@ -108,6 +117,42 @@ void displayProperty_view(const Property &p)
     cout << "Price           : RM" << fixed << setprecision(2) << p.price << endl;
     cout << "Area            : " << p.area << " sqft" << endl;
     cout << "Distance        : " << p.distance << " km" << endl;
+}
 
-    cout << "----------------------------------------\n";
+int countShortlist(string propertyID)
+{
+    ifstream file("Shortlist.txt");
+
+    if (!file.is_open())
+    {
+        return 0;
+    }
+
+    string line;
+    int count = 0;
+
+    while (getline(file, line))
+    {
+        if (line.empty())
+        {
+            continue;
+        }
+
+        stringstream ss(line);
+
+        string studentID;
+        string shortlistedPropertyID;
+
+        getline(ss, studentID, '|');
+        getline(ss, shortlistedPropertyID);
+
+        if (shortlistedPropertyID == propertyID)
+        {
+            count++;
+        }
+    }
+
+    file.close();
+
+    return count;
 }
