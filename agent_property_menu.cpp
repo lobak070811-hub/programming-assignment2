@@ -24,11 +24,12 @@ void agentPropertyMenu()
         cout << "3. Edit Property\n";
         cout << "4. Delete Property\n";
         cout << "5. View My Properties\n";
-        cout << "6. View Enquiries\n";
-        cout << "7. Reply Enquiries\n";
-        cout << "8. Edit house viewing schedules\n";
-        cout << "9. Check appointment\n";
-        cout << "10. Log out\n";
+        cout << "6. View Average Price of Properties\n";
+        cout << "7. View Enquiries\n";
+        cout << "8. Reply Enquiries\n";
+        cout << "9. Edit house viewing schedules\n";
+        cout << "10. Check appointment\n";
+        cout << "11. Log out\n";
         cout << "------------------------------------\n";
 
         cout << "Enter your choice: ";
@@ -57,22 +58,26 @@ void agentPropertyMenu()
                 break;
                 
             case 6:
+            	viewAveragePrice();
+            	break;
+                
+            case 7:
             	viewEnquiries();
             	break;
             	
-            case 7:
+            case 8:
             	replyEnquiries();
             	break;
             	
-            case 8:
+            case 9:
             	editScheduleMenu();
             	break;
             	
-            case 9:
+            case 10:
             	checkAppointment();
             	break;
 
-            case 10:
+            case 11:
                 cout << "\nLogging out...\n";
 
                 currentID = "";

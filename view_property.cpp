@@ -54,12 +54,12 @@ void viewPropertyPublisher()//main function
 
                 cout << "----------------------------------------\n";
                 
+                displayPropertyReview(p.propertyID);
+                
                 system("pause");
             }
         }
     }
-    
-    void displayPropertyReview(string propertyID);
 
     file.close();
 

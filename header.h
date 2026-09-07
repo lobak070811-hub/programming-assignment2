@@ -81,6 +81,7 @@ void addProperty();
 void renewProperty();
 void deleteProperty();
 void viewPropertyPublisher();
+void viewAveragePrice();
 
 void studentMenu();
 void searchProperty();
