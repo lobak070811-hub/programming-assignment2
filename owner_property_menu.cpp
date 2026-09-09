@@ -7,7 +7,13 @@ using namespace std;
 void ownerPropertyMenu()
 {
     int choice;
-
+    if (cin.fail())
+        {
+            cin.clear(); 
+            cin.ignore();
+            cout << "\nInvalid choice. Please enter a number.\n";
+            continue; 
+        }
     while (true)
     {
     	system("cls");
