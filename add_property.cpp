@@ -95,6 +95,14 @@ void inputProperty()
     int roomChoice;
     cout << "Enter choice: ";
     cin >> roomChoice;
+    
+    if(cin.fail())
+		{
+			cin.clear();
+			cin.ignore();
+			cout << "\nInvalid input. Please enter a number.\n";
+			continue;
+		} 
 
     switch (roomChoice)
     {

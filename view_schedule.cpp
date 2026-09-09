@@ -13,6 +13,8 @@ void viewSchedule()
     if (!file)
     {
         cout << "\nNo schedule available.\n";
+        
+        system("pause");
         return;
     }
 
@@ -59,6 +61,9 @@ void viewSchedule()
     if (!found)
     {
         cout << "\n\nYou do not have any schedule yet.\n";
+        
+        system("pause");
+        return;
     }
 
     cout << endl;

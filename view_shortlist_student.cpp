@@ -14,9 +14,9 @@ void viewShortlistStudent()
     if (!shortlistFile)
     {
         cout << "\nNo shortlist available." << endl;
-        cout << "Press [Enter] to return...";
 
         system("pause");
+        return;
     }
 
     string line;

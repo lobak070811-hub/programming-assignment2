@@ -65,6 +65,9 @@ void viewEnquiries()
     if (!found)
     {
         cout << "\nNo enquiries received." << endl;
+        
+        system("pause");
+        return;
     }
     
     system("pause");

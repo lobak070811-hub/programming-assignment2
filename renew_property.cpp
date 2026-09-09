@@ -103,7 +103,7 @@ bool readProperties()
 		{ 
 			propertyFound = true; 
 			updatedProperty = p; 
-		}  
+		} 
 		properties.push_back(p); // Save every property into vector
 	} 
 		file.close(); 

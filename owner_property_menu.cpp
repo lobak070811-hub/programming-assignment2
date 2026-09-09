@@ -35,6 +35,14 @@ void ownerPropertyMenu()
 
         cout << "Enter your choice: ";
         cin >> choice;
+        
+        if(cin.fail())
+		{
+			cin.clear();
+			cin.ignore();
+			cout << "\nInvalid input. Please enter a number.\n";
+			continue;
+		} 
 
         switch (choice)
         {

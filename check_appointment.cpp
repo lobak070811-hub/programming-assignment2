@@ -14,6 +14,8 @@ void checkAppointment()
     if (!file)
     {
         cout << "\nNo appointment received yet.\n";
+        
+        system("pause");
         return;
     }
 
@@ -75,6 +77,8 @@ void checkAppointment()
     if (!found)
     {
         cout << "\nNo appointment received.\n";
+        
+        system("pause");
         return;
     }
 
