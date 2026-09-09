@@ -61,42 +61,66 @@ void selectRoomType(bool selectedRoom[])
 {
     int choice;
     char again;
-	
-	//initialize the choice as false
+
+    // Initialize all room types as not selected
     selectedRoom[0] = false;
     selectedRoom[1] = false;
     selectedRoom[2] = false;
 
     do
     {
-        cout << "\n========================================" << endl;
-        cout << "             SELECT ROOM TYPE" << endl;
-        cout << "========================================" << endl;
-        cout << "1. Master Room" << endl;
-        cout << "2. Middle Room" << endl;
-        cout << "3. Small Room" << endl;
-        cout << "========================================" << endl;
-
-        cout << "Enter your choice: ";
-        cin >> choice;
-
-        if (choice >= 1 && choice <= 3)
+        while (true)
         {
+            cout << "\n========================================" << endl;
+            cout << "             SELECT ROOM TYPE" << endl;
+            cout << "========================================" << endl;
+            cout << "1. Master Room" << endl;
+            cout << "2. Middle Room" << endl;
+            cout << "3. Small Room" << endl;
+            cout << "========================================" << endl;
+
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            // Check whether input is not a number
+            if (cin.fail())
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+
+                cout << "\nInvalid choice. Please enter 1, 2 or 3." << endl;
+                continue;
+            }
+
+            // Check whether number is 1, 2 or 3
+            if (choice < 1 || choice > 3)
+            {
+                cout << "\nInvalid choice. Please enter 1, 2 or 3." << endl;
+                continue;
+            }
+
+            // Valid choice
             selectedRoom[choice - 1] = true;
 
             cout << "\nRoom type selected successfully." << endl;
+
+            break;
         }
-        else
+
+        // Ask whether user wants to select another room type
+        while (true)
         {
-            cout << "\nInvalid choice. Please try again." << endl;
-            continue;
+            cout << "Do you want to select another room type? (Yes(y)/No(n)): ";
+            cin >> again;
+
+            if (again == 'Y' || again == 'y' || again == 'N' || again == 'n')
+            {
+                break;
+            }
+
+            cout << "\nInvalid input. Please enter Y/y or N/n." << endl;
         }
-
-        cout << "Do you want to select another room type? (Yes(y)/No(n)): ";
-        cin >> again;
-
     } while (again == 'Y' || again == 'y');
-
 }
 
 int getPropertyNames(string propertyNames[])
@@ -244,17 +268,30 @@ void inputPriceRange(bool &usePrice, double &minPrice, double &maxPrice)
     cout << "              PRICE RANGE" << endl;
     cout << "========================================" << endl;
 
-    cout << "Do you want to set a price range? (Yes(y)/No(n)): ";
-    cin >> choice;
-
-    if (choice == 'N' || choice == 'n')
+    // Ask whether user wants to use price range
+    while (true)
     {
-        usePrice = false;
-        return;
+        cout << "Do you want to set a price range? (Yes(y)/No(n)): ";
+        cin >> choice;
+
+        if (choice == 'Y' || choice == 'y')
+        {
+            usePrice = true;
+            break;
+        }
+
+        else if (choice == 'N' || choice == 'n')
+        {
+            usePrice = false;
+            return;
+        }
+
+        else
+        {
+            cout << "\nInvalid input. Please enter Y/y or N/n." << endl;
+        }
     }
-
-    usePrice = true;//using pass-by-reference, return value but not 'true'
-
+    // Input price range
     while (true)
     {
         cout << "Enter minimum price: RM ";
@@ -281,14 +318,18 @@ void inputPriceRange(bool &usePrice, double &minPrice, double &maxPrice)
             continue;
         }
 
+        // Check negative price
         if (minPrice < 0 || maxPrice < 0)
         {
             cout << "Price cannot be negative." << endl;
         }
+
+        // Check minimum > maximum
         else if (minPrice > maxPrice)
         {
             cout << "Minimum price cannot be greater than maximum price." << endl;
         }
+
         else
         {
             break;
@@ -304,17 +345,31 @@ void inputDistanceRange(bool &useDistance, double &minDistance, double &maxDista
     cout << "            DISTANCE RANGE" << endl;
     cout << "========================================" << endl;
 
-    cout << "Do you want to set a distance range? (Yes(y)/No(n)): ";
-    cin >> choice;
-
-    if (choice == 'N' || choice == 'n')
+    // Ask whether user wants to use distance range
+    while (true)
     {
-        useDistance = false;
-        return;
+        cout << "Do you want to set a distance range? (Yes(y)/No(n)): ";
+        cin >> choice;
+
+        if (choice == 'Y' || choice == 'y')
+        {
+            useDistance = true;
+            break;
+        }
+
+        else if (choice == 'N' || choice == 'n')
+        {
+            useDistance = false;
+            return;
+        }
+
+        else
+        {
+            cout << "\nInvalid input. Please enter Y/y or N/n." << endl;
+        }
     }
 
-    useDistance = true;
-
+    // Input distance range
     while (true)
     {
         cout << "Enter minimum distance (km): ";
@@ -341,14 +396,18 @@ void inputDistanceRange(bool &useDistance, double &minDistance, double &maxDista
             continue;
         }
 
+        // Check negative distance
         if (minDistance < 0 || maxDistance < 0)
         {
             cout << "Distance cannot be negative." << endl;
         }
+
+        // Check minimum > maximum
         else if (minDistance > maxDistance)
         {
             cout << "Minimum distance cannot be greater than maximum distance." << endl;
         }
+
         else
         {
             break;
