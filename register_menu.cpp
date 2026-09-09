@@ -11,7 +11,13 @@ void agentRegister();
 void registerMenu()
 {
     int choice;
-
+    if (cin.fail())
+        {
+            cin.clear(); 
+            cin.ignore();
+            cout << "\nInvalid choice. Please enter a number.\n";
+            continue; 
+        }
     while (true)
     {
         cout << "\n=============================\n";
