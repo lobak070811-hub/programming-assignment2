@@ -79,6 +79,8 @@ void replyEnquiries()
     if (!found)
     {
         cout << "\nNo enquiries received." << endl;
+        
+        system("pause");
         return;
     }
 
@@ -103,6 +105,11 @@ void replyEnquiries()
 
             break;
         }
+        else
+        {
+        	cout << "\nInvalid enquiry ID.";
+        	return;
+		}
     }
 
     if (!replyFound)

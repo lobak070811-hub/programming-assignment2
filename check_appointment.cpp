@@ -130,12 +130,16 @@ void checkAppointment()
     if (selected == -1)
     {
         cout << "\nAppointment not found.\n";
+        
+        system("pause");
         return;
     }
 
     if (appointments[selected].status != "Pending")
     {
         cout << "\nThis appointment has already been processed.\n";
+        
+        system("pause");
         return;
     }
 
@@ -198,4 +202,6 @@ void checkAppointment()
     output.close();
  
     cout << "\nAppointment updated successfully.\n";
+    
+    system("pause");
 }

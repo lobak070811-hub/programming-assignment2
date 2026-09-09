@@ -90,6 +90,7 @@ void agentPropertyMenu()
 
             default:
                 cout << "\nInvalid choice.\n";
+                break;
         }
     }
 }

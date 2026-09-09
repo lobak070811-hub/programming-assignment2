@@ -112,7 +112,7 @@ void inputProperty()
 
         default:
             cout << "Invalid room type.\n";
-            return;
+            break;
     }
 
     cin.ignore();

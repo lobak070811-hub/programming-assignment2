@@ -8,7 +8,7 @@ void studentMenu()//main function
 {
     int choice;
 
-    do
+    while (true)
     {
     	system("cls");
         cout << "\n========================================" << endl;
@@ -77,7 +77,7 @@ void studentMenu()//main function
 
             default:
                 cout << "\nInvalid choice. Please try again." << endl;
+                break;
         }
-
-    } while(choice != 11);
+    }
 }

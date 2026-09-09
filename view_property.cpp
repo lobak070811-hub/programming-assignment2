@@ -66,9 +66,9 @@ void viewPropertyPublisher()//main function
     if (!found)
     {
         cout << "\nYou have not published any property yet.\n";
+        
+        system("pause");
     }
-    
-    system("pause");
 }
 
 // Read one property from Property.txt

@@ -45,6 +45,7 @@ void registerMenu()
 
             default:
                 cout << "\nInvalid choice.\n";
+                break;
         }
     }
 }

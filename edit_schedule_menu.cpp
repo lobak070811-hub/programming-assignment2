@@ -8,7 +8,7 @@ void editScheduleMenu()
 {
     int choice;
 
-    do
+    while (true)
     {
         cout << "\n========================================\n";
         cout << "             EDIT SCHEDULE\n";
@@ -46,7 +46,7 @@ void editScheduleMenu()
 
             default:
                 cout << "\nInvalid choice.\n";
+                break;
         }
-
-    } while (choice != 4);
+    } 
 }

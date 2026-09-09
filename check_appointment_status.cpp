@@ -87,4 +87,6 @@ void checkAppointmentStatus()
     {
         cout << "\nYou have no appointment.\n";
     }
+    
+    system("pause");
 }

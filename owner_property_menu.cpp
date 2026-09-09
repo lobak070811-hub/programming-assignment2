@@ -26,11 +26,11 @@ void ownerPropertyMenu()
         cout << "4. Delete Property\n";
         cout << "5. View My Properties\n";
         cout << "6. View Average Price of Properties\n";
-        cout << "6. View Enquiries\n";
-        cout << "7. Reply Enquiries\n";
-        cout << "8. Edit house viewing schedules\n";
-        cout << "9. Check appointment\n";
-        cout << "10. Log out\n";
+        cout << "7. View Enquiries\n";
+        cout << "8. Reply Enquiries\n";
+        cout << "9. Edit house viewing schedules\n";
+        cout << "10. Check appointment\n";
+        cout << "11. Log out\n";
         cout << "------------------------------------\n";
 
         cout << "Enter your choice: ";
@@ -91,6 +91,7 @@ void ownerPropertyMenu()
 
             default:
                 cout << "\nInvalid choice.\n";
+                break;
         }
     }
 }
