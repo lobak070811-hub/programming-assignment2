@@ -38,4 +38,11 @@ void viewProfile()
     {
         editProfile();
     }
+    else
+    {
+    	cout << "Exiting...";
+    	
+    	system("pause");
+    	return;
+	}
 }

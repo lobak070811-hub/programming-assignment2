@@ -165,15 +165,16 @@ void addShortlist()
 
         cout << "\nProperty successfully added to your shortlist!" << endl;
     }
-    else if (confirmation != 'Y' || confirmation != 'y' || confirmation != 'N' || confirmation != 'n')
+    else if (confirmation == 'N' || confirmation == 'n')
     {
-    	cout << "\nInvalid input.";
-    	cout << "\nPlease enter Y or N.";
-    	return;
+    	cout << "\nProperty was not added to shortlist." << endl;
 	}
     else
     {
-        cout << "\nProperty was not added to shortlist." << endl;
+        cout << "\nInvalid input."
+             << "\nPlease enter Y or N.";
+             
+        return;
     }
 
 	system("pause");
