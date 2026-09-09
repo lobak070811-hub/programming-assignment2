@@ -29,7 +29,13 @@ void mainMenu()
         cout << "Enter your choice: ";
 
         cin >> choice;
-
+		if (cin.fail())
+        {
+            cin.clear(); 
+            cin.ignore();
+            cout << "\nInvalid choice. Please enter a number.\n";
+            continue; 
+        }
         switch (choice)
         {
             case 1:
