@@ -142,40 +142,51 @@ void addShortlist()
     }
 
     // Ask for confirmation
-    char confirmation;
+    // Ask for confirmation
+	char confirmation;
 
-    cout << "\nDo you want to add this property to your shortlist?" << endl;
-    cout << "Enter Y to confirm or N to cancel: ";
-    cin >> confirmation;
+	while (true)
+	{
+    	cout << "\nDo you want to add this property to your shortlist?" << endl;
+    	cout << "Enter Y to confirm or N to cancel: ";
+    	cin >> confirmation;
 
-    if (confirmation == 'Y' || confirmation == 'y')
-    {
-        ofstream file("Shortlist.txt", ios::app);
+    	// Confirm
+    	if (confirmation == 'Y' || confirmation == 'y')
+    	{
+        	ofstream file("Shortlist.txt", ios::app);
 
-        if (!file)
-        {
-            cout << "\nUnable to open Shortlist.txt." << endl;
-            return;
-        }
+        	if (!file)
+        	{
+            	cout << "\nUnable to open Shortlist.txt." << endl;
+            	return;
+        	}
 
-        // Student ID, Property ID
-        file << currentID << "," << p.propertyID << endl;
+        	// Student ID, Property ID
+        	file << currentID << "," << p.propertyID << endl;
 
-        file.close();
+        	file.close();
 
-        cout << "\nProperty successfully added to your shortlist!" << endl;
-    }
-    else if (confirmation == 'N' || confirmation == 'n')
-    {
-    	cout << "\nProperty was not added to shortlist." << endl;
+        	cout << "\nProperty successfully added to your shortlist!" << endl;
+
+        	break;
+    	}
+
+    	// Cancel
+   		else if (confirmation == 'N' || confirmation == 'n')
+    	{
+        	cout << "\nProperty was not added to shortlist." << endl;
+
+        	break;
+    	}
+
+    	// Invalid input
+    	else
+    	{
+        	cout << "\nInvalid input.";
+        	cout << "\nPlease enter Y or N." << endl;
+    	}
 	}
-    else
-    {
-        cout << "\nInvalid input."
-             << "\nPlease enter Y or N.";
-             
-        return;
-    }
 
 	system("pause");
 }

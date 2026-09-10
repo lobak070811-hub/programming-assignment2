@@ -206,6 +206,8 @@ void givePropertyReview()
     if (!existsProperty(propertyID))
     {
         cout << "\nProperty ID does not exist.\n";
+        
+        system("pause");
         return;
     }
 

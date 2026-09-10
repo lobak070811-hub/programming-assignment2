@@ -122,6 +122,8 @@ void loginMenu()//main function
 
     	cout << "\nLogin Successful!\n";
     	cout << "Welcome, " << currentName << "!\n";
+    	
+    	system("pause");
 	
     	studentMenu();
 		
@@ -144,6 +146,8 @@ void loginMenu()//main function
 
     	cout << "\nLogin Successful!\n";
     	cout << "Welcome, " << currentName << "!\n";
+    	
+    	system("pause");
 
     	ownerPropertyMenu();
 
@@ -166,6 +170,8 @@ void loginMenu()//main function
     	
         cout << "\nLogin Successful!\n";
         cout << "Welcome, " << currentName << "!\n";
+        
+        system("pause");
     	
         agentPropertyMenu();
 

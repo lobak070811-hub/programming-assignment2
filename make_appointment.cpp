@@ -10,6 +10,8 @@ using namespace std;
 bool validDate(string date);
 bool displayPublisherSchedule(string publisherID);
 bool appointmentExists(string publisherID, string scheduleID, string date);
+bool validPropertyID(string propertyID);
+bool propertyBelongsToPublisher(string propertyID, string publisherID);
 
 string defaultAppointmentID();
 string getDayOfWeek(string date);
@@ -31,6 +33,8 @@ void makeAppointment()//main function
     if (!displayPublisherSchedule(publisherID))
     {
         cout << "\nThis publisher has no available schedule.\n";
+        
+        system("pause");
         return;
     }
 
@@ -52,9 +56,60 @@ void makeAppointment()//main function
     cout << "\nDay           : " << selectedDay << endl;
 
     string scheduleID;
+	Schedule selectedSchedule;
+	bool found = false;
 
-    cout << "\nEnter Schedule ID: ";
-    cin >> scheduleID;
+	while (true)
+	{
+    	cout << "\nEnter Schedule ID: ";
+    	cin >> scheduleID;
+
+    	found = false;
+
+    	// Find selected schedule
+    	ifstream scheduleFile("Schedule.txt");
+
+    	if (!scheduleFile)
+    	{
+        	cout << "\nUnable to open Schedule.txt.\n";
+        	return;
+    	}
+
+    	string line;
+
+    	while (getline(scheduleFile, line))
+    	{
+        	if (line.empty())
+            	continue;
+
+        	stringstream ss(line);
+        	Schedule s;
+
+        	getline(ss, s.scheduleID, '|');
+        	getline(ss, s.publisherID, '|');
+        	getline(ss, s.day, '|');
+        	getline(ss, s.startTime, '|');
+        	getline(ss, s.endTime);
+
+        	if (s.scheduleID == scheduleID &&
+            	s.publisherID == publisherID)
+        	{
+            	selectedSchedule = s;
+            	found = true;
+            	break;
+        	}
+    	}
+
+    	scheduleFile.close();
+
+    	if (found)
+    	{
+        	break;
+    	}
+
+    	cout << "\nInvalid Schedule ID." << endl;
+    	cout << "Please enter the Schedule ID again." << endl;
+	}
  
     // Find selected schedule
     ifstream scheduleFile("Schedule.txt");
@@ -100,6 +155,8 @@ void makeAppointment()//main function
     if (!found)
     {
         cout << "\nInvalid Schedule ID for this Publisher.\n";
+        
+        system("pause");
         return;
     }
 
@@ -110,6 +167,8 @@ void makeAppointment()//main function
              << selectedSchedule.day << ".\n";
 
         cout << "Please select another date.\n";
+        
+        system("pause");
         return;
     }
 
@@ -120,20 +179,43 @@ void makeAppointment()//main function
         cout << "This time has already been booked.\n";
         cout << "Please choose another date or schedule.\n";
         cout << "========================================\n";
-
+        
+        system("pause");
         return;
     }
     
     system("pause");
 
     // Ask Property ID
-    string propertyID;
+	string propertyID;
 
-    cout << "\nEnter Property ID for viewing: ";
-    cin >> propertyID;
+	while (true)
+	{
+    	cout << "\nEnter Property ID for viewing: ";
+    	cin >> propertyID;
 
-    // Create appointment
-    Appointment a;
+    	// Check Property ID format
+    	if (!validPropertyID(propertyID))
+    	{
+        	cout << "\nInvalid Property ID format." << endl;
+        	cout << "Please enter the Property ID again." << endl;
+        	continue;
+    	}
+
+    	// Check whether Property belongs to the selected publisher
+    	if (!propertyBelongsToPublisher(propertyID, publisherID))
+    	{
+        	cout << "\nProperty does not belong to this publisher." << endl;
+        	cout << "Please enter the Property ID again." << endl;
+        	continue;
+    	}
+
+    	// Property ID is valid and belongs to publisher
+    	break;
+	}
+
+	// Create appointment
+	Appointment a;
 
     a.appointmentID = defaultAppointmentID();
 
@@ -249,12 +331,64 @@ string defaultAppointmentID()
     return newID.str();
 }
 
+bool validPropertyID(string propertyID)
+{
+    // Property ID must have exactly 4 characters
+    if (propertyID.length() != 4)
+    {
+        return false;
+    }
+
+    // First character must be P
+    if (propertyID[0] != 'P')
+    {
+        return false;
+    }
+
+    // Remaining 3 characters must be numbers
+    for (int i = 1; i < 4; i++)
+    {
+        if (!isdigit(propertyID[i]))
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 bool validDate(string date)
 {
     if (date.length() != 10)
         return false;
 
     if (date[4] != '-' || date[7] != '-')
+        return false;
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 4 || i == 7) 
+            continue;
+
+        if (!isdigit(date[i]))
+            return false;
+    }
+
+    int year = (date[0] - '0') * 1000 + (date[1] - '0') * 100 + (date[2] - '0') * 10 + (date[3] - '0');
+    int month = (date[5] - '0') * 10 + (date[6] - '0');
+    int day = (date[8] - '0') * 10 + (date[9] - '0');
+
+    if (month < 1 || month > 12)
+        return false;
+
+    int daysInMonth[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    {
+        daysInMonth[2] = 29;
+    }
+
+    if (day < 1 || day > daysInMonth[month])
         return false;
 
     return true;
@@ -393,6 +527,58 @@ bool appointmentExists(string publisherID, string scheduleID, string date)
             a.scheduleID == scheduleID &&
             a.date == date &&
             a.status != "Rejected")
+        {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+
+    return false;
+}
+
+bool propertyBelongsToPublisher(string propertyID, string publisherID)
+{
+    ifstream file("Property.txt");
+
+    if (!file)
+    {
+        return false;
+    }
+
+    string line;
+
+    while (getline(file, line))
+    {
+        if (line.empty())
+        {
+            continue;
+        }
+
+        Property p;
+
+        string price;
+        string area;
+        string distance;
+
+        stringstream ss(line);
+
+        getline(ss, p.propertyID, ',');
+        getline(ss, p.roomType, ',');
+        getline(ss, p.propertyName, ',');
+        getline(ss, p.location, ',');
+        getline(ss, price, ',');
+        getline(ss, area, ',');
+        getline(ss, distance, ',');
+        getline(ss, p.publisherID, ',');
+        getline(ss, p.publisherName, ',');
+        getline(ss, p.publisherPhone, ',');
+        getline(ss, p.publisherRole);
+
+        // Check Property ID and Publisher ID
+        if (p.propertyID == propertyID &&
+            p.publisherID == publisherID)
         {
             file.close();
             return true;
