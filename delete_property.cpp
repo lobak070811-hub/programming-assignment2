@@ -82,15 +82,19 @@ void deleteProperty()//main function
     cout << "\nAre you sure you want to delete this property? (yes(y) or no(n)): ";
     cin >> choice;
     
-    if (choice != 'Y' || choice != 'y' || choice != 'N' || choice != 'n')
+    if (choice != 'Y' && choice != 'y' && choice != 'N' && choice != 'n')
     {
     	cout << "\nInvalid input.\n";
+    	
+    	system("pause");
     	return;
 	}
 
-    if (choice != 'Y' && choice != 'y')
+    if (choice == 'N' || choice == 'n')
     {
         cout << "\nDelete cancelled.\n";
+        
+        system("pause");
         return;
     }
 
