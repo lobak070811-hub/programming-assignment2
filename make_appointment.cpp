@@ -111,55 +111,6 @@ void makeAppointment()//main function
     	cout << "Please enter the Schedule ID again." << endl;
 	}
  
-    // Find selected schedule
-    ifstream scheduleFile("Schedule.txt");
-
-    if (!scheduleFile)
-    {
-        cout << "\nUnable to open Schedule.txt.\n";
-        return;
-    }
-
-    string line;
-
-    Schedule selectedSchedule;
-
-    bool found = false;
-
-    while (getline(scheduleFile, line))
-    {
-        if (line.empty())
-            continue;
-
-        stringstream ss(line);
-
-        Schedule s;
-
-        getline(ss, s.scheduleID, '|');
-        getline(ss, s.publisherID, '|');
-        getline(ss, s.day, '|');
-        getline(ss, s.startTime, '|');
-        getline(ss, s.endTime);
-
-        if (s.scheduleID == scheduleID &&
-            s.publisherID == publisherID)
-        {
-            selectedSchedule = s;
-            found = true;
-            break;
-        }
-    }
-
-    scheduleFile.close();
-
-    if (!found)
-    {
-        cout << "\nInvalid Schedule ID for this Publisher.\n";
-        
-        system("pause");
-        return;
-    }
-
     // Check whether selected date matches schedule day
     if (selectedSchedule.day != selectedDay)
     {
