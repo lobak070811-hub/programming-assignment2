@@ -92,6 +92,7 @@ void agentPropertyMenu()
                 currentID = "";
                 currentName = "";
                 currentPhone = "";
+                currentEmail = "";
                 currentRole = "";
 
                 return;

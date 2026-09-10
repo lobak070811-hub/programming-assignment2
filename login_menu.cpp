@@ -15,7 +15,7 @@ string currentPhone;
 string currentEmail;
 string currentRole;
 
-void getUserInfo(string filename, string inputID, string &name, string &phone)
+void getUserInfo(string filename, string inputID, string &name, string &phone, string &email)
 {
     ifstream file(filename.c_str());
 
@@ -30,8 +30,7 @@ void getUserInfo(string filename, string inputID, string &name, string &phone)
     {
         stringstream ss(line);
 
-        string id;
-        string email;
+        string id; 
         string password;
 
         getline(ss, id, ',');
@@ -115,7 +114,8 @@ void loginMenu()//main function
         	"Student.txt",
         	inputID,
         	currentName,
-        	currentPhone
+        	currentPhone,
+			currentEmail 
     	);
 
     	currentRole = "Student";
@@ -139,7 +139,8 @@ void loginMenu()//main function
         	"Owner.txt",
         	inputID,
         	currentName,
-        	currentPhone
+        	currentPhone,
+        	currentEmail
     	);
 
     	currentRole = "Owner";
@@ -163,7 +164,8 @@ void loginMenu()//main function
         	"Agent.txt",
         	inputID,
         	currentName,
-        	currentPhone
+        	currentPhone,
+        	currentEmail
     	);
 
     	currentRole = "Agent";

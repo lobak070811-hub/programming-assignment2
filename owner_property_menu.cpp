@@ -93,6 +93,7 @@ void ownerPropertyMenu()
                 currentID = "";
                 currentName = "";
                 currentPhone = "";
+                currentEmail = "";
                 currentRole = "";
 
                 return;

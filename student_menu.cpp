@@ -14,6 +14,13 @@ void studentMenu()//main function
         cout << "\n========================================" << endl;
         cout << "              STUDENT MENU" << endl;
         cout << "========================================" << endl;
+        
+
+        cout << "Welcome, " << currentName << "!\n";
+        cout << "ID    : " << currentID << endl;
+        cout << "Phone : " << currentPhone << endl;
+
+        cout << "\n------------------------------------\n";
         cout << "1. View Profile" << endl;
         cout << "2. View Property" << endl;
         cout << "3. Search Property" << endl;
@@ -81,7 +88,7 @@ void studentMenu()//main function
 
             case 11:
                 cout << "\nLogging out..." << endl;
-                break;
+                return;
 
             default:
                 cout << "\nInvalid choice. Please try again." << endl;
