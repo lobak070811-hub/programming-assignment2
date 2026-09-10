@@ -105,16 +105,13 @@ void replyEnquiries()
 
             break;
         }
-        else
-        {
-        	cout << "\nInvalid enquiry ID.";
-        	return;
-		}
     }
 
     if (!replyFound)
     {
-        cout << "\nEnquiry not found." << endl;
+        cout << "\nInvalid or unaothorized Enquiry ID.\n" << endl;
+        
+        system("pause"); 
         return;
     }
 
