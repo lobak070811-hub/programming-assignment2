@@ -50,7 +50,7 @@ void editScheduleMenu()
 
             case 4:
                 cout << "\nReturning to previous menu...\n";
-                break;
+                return;
 
             default:
                 cout << "\nInvalid choice.\n";
